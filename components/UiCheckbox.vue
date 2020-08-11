@@ -1,11 +1,6 @@
 <template>
   <label
     class="ui-checkbox"
-    :class="{
-      'ui-checkbox_dark': dark,
-      'ui-checkbox_light': light,
-      'ui-checkbox_brand': brand,
-    }"
     :style="{ 'min-width': minWidth }"
   >
     <input

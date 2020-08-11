@@ -1,9 +1,9 @@
 .p-0 {
-  padding: 0 !important;
+  padding: 0;
 }
 .px-0 {
-  padding-right: 0 !important;
-  padding-left: 0  !important;
+  padding-right: 0;
+  padding-left: 0;
 }
 .py-0 {
   padding-top: 0;
@@ -22,9 +22,8 @@
   padding-left: 0;
 }
 
-
 .p-half {
-  padding: $gap / 2 !important;
+  padding: $gap / 2;
 }
 .px-half {
   padding-right: $gap / 2;
@@ -51,7 +50,7 @@
 }
 
 .p-1 {
-  padding: $gap !important;
+  padding: $gap;
 }
 .px-1 {
   padding-right: $gap;
@@ -71,9 +70,8 @@
   padding-right: $gap;
 }
 .pl-1 {
-  padding-left: $gap !important;
+  padding-left: $gap;
 }
-
 
 .p-2 {
   padding: $gap * 2;
@@ -99,7 +97,6 @@
   padding-left: $gap * 2;
 }
 
-
 .p-3 {
   padding: $gap * 3;
 }
@@ -123,7 +120,6 @@
 .pl-3 {
   padding-left: $gap * 3;
 }
-
 
 .p-4 {
   padding: $gap * 4;

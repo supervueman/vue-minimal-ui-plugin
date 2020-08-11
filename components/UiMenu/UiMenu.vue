@@ -8,7 +8,7 @@
   >
     <input
       class="ui-menu--button item"
-      @click="$emit('clickButton', $event)"
+      @click="$emit('click-button', $event)"
       :placeholder="label"
       @focus="openListClick"
       @blur="closeListClick"
@@ -22,7 +22,7 @@
             v-for="(item, i) in items"
             :key="`menu-list-item-${i}`"
             class="ui-menu--list-item"
-            @click="$emit('clickListItem', item)"
+            @click="$emit('click-list-item', item)"
           >
             <slot name="item" :item="item">{{ item }}</slot>
           </li>
@@ -30,7 +30,7 @@
       </div>
     </transition>
 
-    <div class="ui-menu--icon" @click="$emit('clickIcon', $event)">
+    <div class="ui-menu--icon" @click="$emit('click-icon', $event)">
       <div class="ui-menu--icon-item">
         <slot name="icon">
           <svg>

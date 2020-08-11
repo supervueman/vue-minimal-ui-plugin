@@ -2,9 +2,6 @@
   <div
     class="ui-input"
     :class="{
-      'ui-input_dark': dark,
-      'ui-input_light': light,
-      'ui-input_brand': brand,
       'ui-input_error': errorMessage,
       'ui-input_active': isListView,
     }"
@@ -202,17 +199,6 @@
       bottom: 0;
       left: 0;
       color: $error-color;
-    }
-
-    &_light {
-      .ui-input--item {
-        color: $dark-color;
-      }
-    }
-    &_dark {
-      .ui-input--item {
-        color: $light-color;
-      }
     }
     &_active {
       .ui-input {

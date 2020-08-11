@@ -1,7 +1,6 @@
 <template>
   <div
     class="ui-layout"
-    :class="{'ui-layout_dark': dark, 'ui-layout_light': light, 'ui-layout_brand': brand}"
     :style="{'max-width': maxWidth, 'min-width': minWidth, 'max-height': maxHeight, 'min-height': minHeight, 'overflow-x': overflowX, 'overflow-y': overflowY}"
   >
     <slot></slot>
@@ -45,17 +44,5 @@ export default {
 <style lang="scss" scoped>
 .ui-layout {
   width: 100%;
-  &_brand {
-    background-color: $brand-color;
-    color: $light-color;
-  }
-  &_light {
-    background-color: $light-color;
-    color: $dark-color;
-  }
-  &_dark {
-    background-color: $dark-color;
-    color: $light-color;
-  }
 }
 </style>

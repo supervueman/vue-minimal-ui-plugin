@@ -14,7 +14,7 @@
         <div
           class="d-flex align-center flex-2"
           :style="{ padding: paddingProp }"
-          @click="$emit('clickItem', { item, index })"
+          @click="$emit('click-item', { item, index })"
         >
           <span v-if="iconStatus" class="ui-list--item--icon">
             <slot name="iconStatus"></slot>

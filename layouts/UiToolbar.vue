@@ -1,7 +1,7 @@
 <template>
   <header
     class="ui-toolbar"
-    :class="{'ui-toolbar_dark': dark, 'ui-toolbar_light': light, 'ui-toolbar_brand': brand, 'ui-toolbar_fixed': fixed}"
+    :class="{'ui-toolbar_fixed': fixed}"
   >
     <slot></slot>
   </header>
@@ -32,18 +32,6 @@ export default {
   z-index: z(toolbar);
   &_fixed {
     position: fixed;
-  }
-  &_brand {
-    background-color: $brand-color;
-    color: $light-color;
-  }
-  &_light {
-    background-color: $light-color;
-    color: $dark-color;
-  }
-  &_dark {
-    background-color: $dark-color;
-    color: $light-color;
   }
 }
 </style>

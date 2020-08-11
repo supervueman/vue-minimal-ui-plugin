@@ -31,7 +31,6 @@
     width: 100%;
     padding: $gap / 2;
     background-color: $brand-lighten-color-2;
-    // color: $light-color;
     position: relative;
     transition: background-color 0.3s $cubic;
     cursor: pointer;

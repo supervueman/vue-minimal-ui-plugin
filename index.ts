@@ -1,3 +1,5 @@
+import _Vue from 'vue';
+
 /* ==============================================
  * ================= Layouts ====================
  */
@@ -41,7 +43,7 @@ import UiDragAndDropFile from "./components/UiDragAndDropFile";
 import UiScrollPagination from "./components/UiScrollPagination";
 
 export default {
-  install(Vue) {
+  install(Vue: typeof _Vue) {
     Vue.mixin({
       components: {
         // Layouts
@@ -81,20 +83,6 @@ export default {
         UiDragAndDropFile,
         UiScrollPagination
       },
-      props: {
-        dark: {
-          type: Boolean,
-          default: false
-        },
-        light: {
-          type: Boolean,
-          default: false
-        },
-        brand: {
-          type: Boolean,
-          default: false
-        }
-      }
     });
   }
 };

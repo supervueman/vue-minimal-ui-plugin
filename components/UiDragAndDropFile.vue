@@ -1,19 +1,18 @@
 <template>
   <div>
-
     <!--  Validation start  -->
     <div class="ui-file-input--footer" v-if="showDetails">
       <div
-              v-for="(item, i) in validErrors"
-              :key="`error-${i}`"
+        v-for="(item, i) in validErrors"
+        :key="`error-${i}`"
       >
         <div v-if="item.isError">
-              <span v-if="item.key === 'extension-error'">
-               Недопустимый формат файла: {{item.value}}. Допустимые форматы файлов:
-                <span v-for="(format, i) in validExtensions" :key="format">
-                  {{format}}<span v-if="i !== validExtensions.length - 1">, </span>
-                </span>.
-              </span>
+          <span v-if="item.key === 'extension-error'">Недопустимый формат файла: {{item.value}}. Допустимые форматы файлов:
+            <span v-for="(format, i) in validExtensions" :key="format">
+              {{format}}
+              <span v-if="i !== validExtensions.length - 1">, </span>
+            </span>.
+          </span>
           <span v-if="item.key === 'file-size-error'">Размер файла: {{Math.round(item.value * 100) / 100}}Мб. Допустимый размер файла: {{maxFileSize}}Мб.</span>
           <span v-if="item.key === 'total-size-error'">Общий размер файлов: {{Math.round(item.value) / 100}}Мб. Максимально допустимый размер файлов: {{maxTotalSize}}Мб.</span>
           <span v-if="item.key === 'file-count-error'">Количество файлов: {{item.value}}. Допустимое количество файлов: {{maxFileCount}}Мб.</span>
@@ -23,29 +22,30 @@
     <!--  Validation end  -->
 
     <label
-            :style="{'min-width': minWidth, 'max-width': maxWidth, 'min-height': minHeight, 'max-height': maxHeight}"
-            class="ui-drag-and-drop"
-            :class="{'ui-drag-and-drop-hover': isHoverFiles}"
-            for="fileDrag"
-            @drop.prevent="addFile"
-            @dragover.prevent
-            @dragenter="fileEnter"
-            @dragleave="fileLeave"
+      :style="{'min-width': minWidth, 'max-width': maxWidth, 'min-height': minHeight, 'max-height': maxHeight}"
+      class="ui-drag-and-drop"
+      :class="{'ui-drag-and-drop-hover': isHoverFiles}"
+      for="fileDrag"
+      @drop.prevent="addFile"
+      @dragover.prevent
+      @dragenter="fileEnter"
+      @dragleave="fileLeave"
     >
-    <span
-            class="ui-drag-and-drop--label"
-            :class="{'ui-drag-and-drop--label-hover': isHoverFiles}"
-    >
-      {{message}}
-    </span>
+      <span
+        class="ui-drag-and-drop--label"
+        :class="{'ui-drag-and-drop--label-hover': isHoverFiles}"
+      >
+        {{message}}
+      </span>
       <input
-              type="file"
-              id="fileDrag"
-              :multiple="multiple"
-              class="ui-drag-and-drop--input"
-              @change="addFile"
+        type="file"
+        id="fileDrag"
+        :multiple="multiple"
+        class="ui-drag-and-drop--input"
+        @change="addFile"
       />
     </label>
+
     <div class="ui-drag-and-drop--list" :style="{'max-width': maxWidthList}">
       <div v-for="(item, index) in value" :key="`index: ${index}`" class="ui-drag-and-drop--list-item" :style="getColumns">
         <DeleteIcon @click="deleteFile(item, index)" class="ui-drag-and-drop--list-item--icon"/>
@@ -55,11 +55,11 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
 import valid from "@/refactor/ui-kit/mixins/fileInputValid.js";
+
 export default {
   name: "UiDragAndDropFile",
   mixins: [valid],

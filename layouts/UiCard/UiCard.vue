@@ -1,7 +1,7 @@
 <template>
   <div
     class="ui-card"
-    :class="{'ui-card_dark': dark, 'ui-card_light': light, 'ui-card_brand': brand, 'ui-card_flat': flat, 'ui-card_error': type === 'error', 'ui-card_success': type === 'success'}"
+    :class="{'ui-card_flat': flat, 'ui-card_error': type === 'error', 'ui-card_success': type === 'success'}"
     :style="{'max-width': maxWidth, 'min-width' : minWidth, 'max-height' : maxHeight, 'min-height': minHeight}"
   >
     <slot></slot>
@@ -55,18 +55,6 @@ export default {
     border: 1px solid $dark-color;
     width: 100%;
     padding: $gap 0;
-  }
-  &_brand {
-    background-color: $brand-color;
-    color: $light-color;
-  }
-  &_light {
-    background-color: $light-color;
-    color: $text-color;
-  }
-  &_dark {
-    background-color: $dark-color;
-    color: $light-color;
   }
   &_flat {
     border: none;
