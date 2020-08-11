@@ -1,0 +1,11 @@
+{
+  "name": "pr_ui_kit",
+  "version": "1.0.0",
+  "description": "Ui-kit for many projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

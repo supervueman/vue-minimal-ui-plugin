@@ -1,0 +1,119 @@
+<template>
+  <div
+    class="ui-input"
+    v-bind="$attrs"
+    :class="{ 'ui-input_error': errorMessage }"
+    :style="{ 'max-width': maxWidth, 'min-width': minWidth }"
+  >
+    <label class="ui-input--inner">
+      <span class="ui-input--label" v-if="label">{{ label }}</span>
+      <input
+        :class="inputClass.length ? inputClass : 'ui-input--item'"
+        :name="name"
+        :placeholder="placeholder"
+        :type="type"
+        :maxlength="maxlength"
+        :required="required"
+        :disabled="disabled"
+        :value="value"
+        @input="$emit('input', $event.target.value)"
+      />
+    </label>
+    <div class="ui-input--footer" v-if="errorMessage && !hiddenDetails">
+      {{ errorMessage }}
+    </div>
+  </div>
+</template>
+
+<script>
+  import inputPropsMixin from "../mixins/inputs/inputPropsMixin.js";
+
+  export default {
+    name: "UiInput",
+
+    mixins: [inputPropsMixin],
+
+    props: {
+      value: {
+        type: String | Number,
+        default: "",
+      },
+
+      maxlength: {
+        type: String,
+        default: "",
+      },
+      type: {
+        type: String,
+        default: "text",
+      },
+      hiddenDetails: {
+        type: Boolean,
+        default: false,
+      },
+      inputClass: {
+        type: String,
+        default: "",
+      },
+    },
+  };
+</script>
+
+<style lang="scss" scoped>
+  .ui-input {
+    // padding-bottom: 12px;
+    margin-bottom: 10px;
+    color: $dark-color;
+    position: relative;
+    &--inner {
+      width: 100%;
+      position: relative;
+    }
+    &--item {
+      outline: none;
+      width: 100%;
+      height: 40px;
+      padding-left: $gap / 2;
+      padding-right: $gap / 2;
+      border: 1px solid $light-gray-color;
+      border-right-width: 4px;
+      border-radius: $border-radius;
+      background-color: $light-color;
+      appearance: none;
+      display: flex;
+      align-items: center;
+      transition: border-color 0.3s $cubic, background-color 0.3s $cubic;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+      @include on-event {
+        border-right-color: $brand-lighten-color-2;
+      }
+      &:disabled {
+        background-color: $light-gray-color-2;
+        border-color: $light-gray-color;
+        pointer-events: none;
+      }
+    }
+    &--label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    &--footer {
+      font-size: 10px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      color: $error-color;
+    }
+
+    &_error {
+      .ui-input--item {
+        border-right-color: $error-color;
+        color: $error-color;
+      }
+    }
+  }
+</style>
