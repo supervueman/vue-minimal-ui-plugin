@@ -7,22 +7,17 @@
   </header>
 </template>
 
-<script>
-export default {
-  name: "UiToolbar",
+<script lang="ts">
+import {Vue, Component, Prop} from 'vue-property-decorator';
 
-  mixins: ["themeProps"],
-
-  props: {
-    fixed: {
-      type: Boolean,
-      default: false
-    }
-  }
+@Component({})
+export default class UiToolbar extends Vue {
+  @Prop({type: Boolean, default: false})
+  private readonly fixed: boolean;
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .ui-toolbar {
   top: 0;
   left: 0;

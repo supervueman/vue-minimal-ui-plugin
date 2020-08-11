@@ -1,7 +1,7 @@
 {
-  "name": "pr_ui_kit",
+  "name": "pr_ui_kit_test",
   "version": "1.0.0",
-  "description": "Ui-kit for many projects",
+  "description": "UiKit Starter",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,16 +12,23 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.11.1",
-    "@storybook/addon-actions": "^6.0.0",
-    "@storybook/addon-essentials": "^6.0.0",
-    "@storybook/addon-links": "^6.0.0",
-    "@storybook/vue": "^6.0.0",
+    "@storybook/addon-actions": "^6.0.1",
+    "@storybook/addon-essentials": "^6.0.1",
+    "@storybook/addon-links": "^6.0.1",
+    "@storybook/vue": "^6.0.1",
     "babel-loader": "^8.1.0",
     "react-is": "^16.13.1"
   },
   "dependencies": {
+    "node-sass": "^4.14.1",
+    "sass": "^1.26.10",
+    "sass-loader": "7.3.1",
+    "typescript": "^3.9.7",
     "vue": "^2.6.11",
+    "vue-class-component": "^7.2.5",
     "vue-loader": "^15.9.3",
+    "vue-property-decorator": "^9.0.0",
+    "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.11"
   }
 }

@@ -1,4 +1,4 @@
-import ieBrowserDefine from "../../../_helper/ieBrowserDefine";
+import ieBrowserDefine from "../_helper/ieBrowserDefine";
 
 export default {
   watch: {
