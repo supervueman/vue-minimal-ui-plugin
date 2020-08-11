@@ -7,7 +7,6 @@
 </template>
 
 <script>
-
   export default {
     props: {
       maxHeight: {
@@ -39,7 +38,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .ui-scroll-pagination {
   height: 100%;
   overflow-y: auto;

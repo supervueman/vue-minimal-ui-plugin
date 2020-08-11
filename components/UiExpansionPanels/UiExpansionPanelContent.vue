@@ -29,7 +29,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .ui-expansion-panels--item-content {
     width: 100%;
     transition: height 0.3s $cubic;

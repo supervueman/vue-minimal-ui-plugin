@@ -59,7 +59,7 @@
   };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .ui-input {
     // padding-bottom: 12px;
     margin-bottom: 10px;

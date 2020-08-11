@@ -292,7 +292,7 @@
   };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
   .ui-data-table {
     width: 100%;
     text-align: left;

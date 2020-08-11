@@ -40,7 +40,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .ui-alert {
   max-width: 300px;
   padding: $gap;

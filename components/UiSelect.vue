@@ -180,7 +180,7 @@
   };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .ui-select {
     padding-bottom: 12px;
     position: relative;

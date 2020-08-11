@@ -84,7 +84,7 @@
   };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .ui-expansion-panels--item {
     width: 100%;
     display: flex;

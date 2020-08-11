@@ -78,7 +78,7 @@
   };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
   .ui-checkbox {
     display: flex;
     align-items: center;

@@ -59,7 +59,7 @@
   };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .ui-textarea {
     padding-bottom: 12px;
     color: $dark-color;

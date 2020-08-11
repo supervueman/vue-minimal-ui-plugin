@@ -17,7 +17,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .ui-expansion-panels {
     width: 100%;
     display: flex;

@@ -126,7 +126,7 @@
   }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .ui-pagination {
   display: flex;
   align-items: center;
