@@ -21,17 +21,12 @@ import UiList from "./layouts/UiList/UiList";
  * ================= Components =================
  */
 import UiAlert from "./components/UiAlert";
-import UiLink from "./components/UiLink/index";
-import UiButton from "./components/UiButton/index";
 import UiInput from "./components/UiInput";
 import UiInputSearch from "./components/UiInputSearch/UiInputSearch";
 import UiFileInput from "./components/UiFileInput";
 import UiCheckbox from "./components/UiCheckbox";
 import UiTextarea from "./components/UiTextarea";
 import UiSelect from "./components/UiSelect";
-import UiImage from "./components/UiImage";
-import UiIcon from "./components/UiIcon";
-import UiDivider from "./components/UiDivider";
 import UiDataTable from "./components/UiDataTable/UiDataTable";
 import UiPagination from "./components/UiPagination";
 import UiTabs from "./components/UiTabs/UiTabs";
@@ -44,6 +39,8 @@ import UiScrollPagination from "./components/UiScrollPagination";
 
 export default {
   install(Vue: typeof _Vue) {
+    Vue.config.prefix = 'Ui';
+
     Vue.mixin({
       components: {
         // Layouts
@@ -62,17 +59,12 @@ export default {
         UiList,
         // Components
         UiAlert,
-        UiLink,
-        UiButton,
         UiInput,
         UiInputSearch,
         UiFileInput,
         UiCheckbox,
         UiTextarea,
         UiSelect,
-        UiImage,
-        UiIcon,
-        UiDivider,
         UiDataTable,
         UiPagination,
         UiTabs,

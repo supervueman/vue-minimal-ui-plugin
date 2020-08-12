@@ -13,7 +13,7 @@ import {Vue, Component, Prop} from 'vue-property-decorator';
 @Component({})
 export default class UiToolbar extends Vue {
   @Prop({type: Boolean, default: false})
-  private readonly fixed: boolean;
+  private readonly fixed!: boolean;
 };
 </script>
 
