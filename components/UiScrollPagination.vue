@@ -38,7 +38,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .ui-scroll-pagination {
   height: 100%;
   overflow-y: auto;

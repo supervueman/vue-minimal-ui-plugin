@@ -199,7 +199,7 @@
   };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .ui-input {
     padding-bottom: 12px;
     color: $dark-color;

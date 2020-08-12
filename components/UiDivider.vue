@@ -23,7 +23,7 @@
   };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .ui-divider {
     background-color: $gray-color;
     &_horizontal {

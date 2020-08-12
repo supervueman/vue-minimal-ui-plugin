@@ -82,7 +82,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
   .ui-list {
     /*overflow-x: hidden;*/
     border-radius: $border-radius;

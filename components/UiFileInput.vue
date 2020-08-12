@@ -109,7 +109,7 @@
   };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .ui-file-input {
     display: flex;
     align-items: flex-start;

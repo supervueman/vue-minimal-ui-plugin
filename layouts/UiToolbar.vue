@@ -17,7 +17,7 @@ export default class UiToolbar extends Vue {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .ui-toolbar {
   top: 0;
   left: 0;

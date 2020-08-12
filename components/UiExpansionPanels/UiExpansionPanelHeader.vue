@@ -26,7 +26,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .ui-expansion-panels--item-header {
     width: 100%;
     padding: $gap / 2;

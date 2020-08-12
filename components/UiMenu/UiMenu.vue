@@ -99,7 +99,7 @@
   };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .ui-menu {
     background-color: $brand-color;
     color: $light-color;

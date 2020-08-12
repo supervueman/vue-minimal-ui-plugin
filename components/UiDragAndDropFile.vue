@@ -139,7 +139,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .ui-drag-and-drop {
     display: flex;
     align-items: center;
