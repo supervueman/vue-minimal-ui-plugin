@@ -3,7 +3,6 @@
     class="ui-input"
     v-bind="$attrs"
     :class="{ 'ui-input_error': errorMessage }"
-    :style="{ 'max-width': maxWidth, 'min-width': minWidth }"
   >
     <label class="ui-input--inner">
       <span class="ui-input--label" v-if="label">{{ label }}</span>

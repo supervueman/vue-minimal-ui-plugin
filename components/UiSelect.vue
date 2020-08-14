@@ -2,7 +2,6 @@
   <div
     class="ui-select"
     :class="{ 'ui-select_error': errorMessage, 'ui-select_active': isListView }"
-    :style="{ 'max-width': maxWidth, 'min-width': minWidth }"
   >
     <span v-if="label" class="ui-select--label">{{ label }}</span>
     <div class="ui-select--inner">

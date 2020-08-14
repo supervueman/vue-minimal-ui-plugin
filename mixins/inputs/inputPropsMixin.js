@@ -24,13 +24,5 @@ export default {
 			type: String,
 			default: "",
 		},
-		maxWidth: {
-			type: String,
-			default: "",
-		},
-		minWidth: {
-			type: String,
-			default: "",
-		},
 	}
 };

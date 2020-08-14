@@ -5,7 +5,6 @@
       'ui-input_error': errorMessage,
       'ui-input_active': isListView,
     }"
-    :style="{ 'max-width': maxWidth, 'min-width': minWidth }"
   >
     <label class="ui-input--inner">
       <span class="ui-input--label" v-if="label">{{ label }}</span>

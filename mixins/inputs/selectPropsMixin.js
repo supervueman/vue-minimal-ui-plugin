@@ -20,13 +20,5 @@ export default {
 			type: Boolean,
 			default: false,
 		},
-		maxWidth: {
-			type: String,
-			default: "",
-		},
-		minWidth: {
-			type: String,
-			default: "",
-		},
 	}
 };

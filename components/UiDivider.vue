@@ -32,7 +32,6 @@
     }
     &_vertical {
       width: 2px;
-      /*height: 100%;*/
     }
   }
 </style>

@@ -5,7 +5,6 @@
       'ui-input_error': errorMessage,
       'ui-input_active': isListView && parseItems.length > 0,
     }"
-    :style="{ 'max-width': maxWidth, 'min-width': minWidth }"
   >
     <div class="ui-input--inner">
       <span class="ui-input--label">{{ label }}</span>

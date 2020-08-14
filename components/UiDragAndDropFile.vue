@@ -22,7 +22,6 @@
     <!--  Validation end  -->
 
     <label
-      :style="{'min-width': minWidth, 'max-width': maxWidth, 'min-height': minHeight, 'max-height': maxHeight}"
       class="ui-drag-and-drop"
       :class="{'ui-drag-and-drop-hover': isHoverFiles}"
       for="fileDrag"
@@ -46,7 +45,7 @@
       />
     </label>
 
-    <div class="ui-drag-and-drop--list" :style="{'max-width': maxWidthList}">
+    <div class="ui-drag-and-drop--list">
       <div v-for="(item, index) in value" :key="`index: ${index}`" class="ui-drag-and-drop--list-item" :style="getColumns">
         <DeleteIcon @click="deleteFile(item, index)" class="ui-drag-and-drop--list-item--icon"/>
         <div class="ui-drag-and-drop--list-item--text">
@@ -68,29 +67,9 @@ export default {
     event: 'change'
   },
   props: {
-    minWidth: {
-      type: String,
-      default: ''
-    },
-    maxWidth: {
-      type: String,
-      default: ''
-    },
-    minHeight: {
-      type: String,
-      default: ''
-    },
-    maxHeight: {
-      type: String,
-      default: ''
-    },
     columns: {
       type: String,
       default: '2'
-    },
-    maxWidthList: {
-      type: String,
-      default: '500px'
     },
     message: {
       type: String,
