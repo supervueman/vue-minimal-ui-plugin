@@ -1,8 +1,8 @@
 import UiMenu from '../components/UiMenu/UiMenu.vue';
 
 export default {
+	title: 'Components/UiMenu',
 	component: UiMenu,
-	title: 'UiMenu'
 };
 
 export const base = () => ({

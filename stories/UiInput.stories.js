@@ -1,8 +1,8 @@
 import UiInput from '../components/UiInput';
 
 export default {
+	title: 'Components/UiInput',
 	component: UiInput,
-	title: 'UiInput'
 };
 
 export const base = () => ({

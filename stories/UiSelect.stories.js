@@ -1,8 +1,8 @@
 import UiSelect from '../components/UiSelect.vue';
 
 export default {
+	title: 'Components/UiSelect',
 	component: UiSelect,
-	title: 'UiSelect'
 };
 
 export const base = () => ({

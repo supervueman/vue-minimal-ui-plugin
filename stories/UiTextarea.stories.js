@@ -1,8 +1,8 @@
 import UiTextarea from '../components/UiTextarea';
 
 export default {
+	title: 'Components/UiTextarea',
 	component: UiTextarea,
-	title: 'UiTextarea'
 };
 
 export const base = () => ({

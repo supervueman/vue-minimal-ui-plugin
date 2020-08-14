@@ -1,8 +1,8 @@
 import UiScrollPagination from '../components/UiScrollPagination';
 
 export default {
+  title: 'Components/UiScrollPagination',
   component: UiScrollPagination,
-  title: 'UiScrollPagination'
 };
 
 export const base = () => ({

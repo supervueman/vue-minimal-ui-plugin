@@ -1,8 +1,8 @@
 import UiCheckbox from '../components/UiCheckbox.vue';
 
 export default {
+	title: 'Components/UiCheckbox',
 	component: UiCheckbox,
-	title: 'UiCheckbox'
 };
 
 export const base = () => ({
@@ -11,7 +11,7 @@ export const base = () => ({
 	},
 	template: `
 		<div>
-			<UiCheckbox label="Label" v-model="isShow"/>
+			<UiCheckbox label="Label" @input="isShow = $event"/>
 			<h3 v-if="isShow">Show text</h3>
 		</div>`,
 

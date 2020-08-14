@@ -10,8 +10,8 @@ import UiDataTable from '../components/UiDataTable/UiDataTable.vue';
 
 
 export default {
+	title: 'Components/UiDataTable',
 	component: UiDataTable,
-	title: 'UiDataTable'
 };
 
 export const base = () => ({

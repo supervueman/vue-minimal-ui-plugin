@@ -1,7 +1,7 @@
 import UiAlert from '../components/UiAlert.vue';
 
 export default {
-  title: 'Example/UiAlert',
+  title: 'Components/UiAlert',
   component: UiAlert,
 };
 
