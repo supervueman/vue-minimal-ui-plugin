@@ -7,13 +7,6 @@
 <script>
   export default {
     name: 'UiExpansionPanels',
-
-    props: {
-      flat: {
-        type: Boolean,
-        default: false
-      }
-    }
   }
 </script>
 

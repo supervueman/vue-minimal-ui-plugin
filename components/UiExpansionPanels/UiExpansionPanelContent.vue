@@ -5,7 +5,6 @@
   >
     <div
       class="ui-expansion-panels--item-content--inner"
-      :class="{'ui-expansion-panels--item-content--inner_flat': flat}"
     >
       <slot/>
     </div>
@@ -36,9 +35,6 @@
     &--inner {
       width: 100%;
       padding: $gap / 2;
-      &_flat {
-        padding: 0;
-      }
     }
   }
 </style>
