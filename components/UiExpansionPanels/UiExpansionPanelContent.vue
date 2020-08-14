@@ -20,10 +20,6 @@
         type: Number,
         default: null
       },
-      flat: {
-        type: Boolean,
-        default: false
-      }
     }
   }
 </script>
