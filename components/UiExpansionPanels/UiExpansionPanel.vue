@@ -7,7 +7,6 @@
     <UiExpansionPanelContent
       ref="content"
       :height="height"
-      :flat="$parent.flat"
       :class="{ is_init: isInit }"
     >
       <slot name="content" />
