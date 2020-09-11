@@ -11,7 +11,6 @@
 export default {
   name: "UiLayout",
 
-  mixins: ["themeProps"],
   props: {
     maxWidth: {
       type: String,

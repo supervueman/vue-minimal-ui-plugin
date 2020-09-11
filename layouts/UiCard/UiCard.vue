@@ -12,8 +12,6 @@
 export default {
   name: "UiCard",
 
-  mixins: ["themeProps"],
-
   props: {
     flat: {
       type: Boolean,

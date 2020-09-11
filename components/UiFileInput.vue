@@ -1,6 +1,14 @@
 <template>
-  <div class="ui-file-input" :class="{ 'ui-file-input_error': false }">
-    <input type="file" ref="file" @change="selectFiles" :multiple="multiple" />
+  <div
+    class="ui-file-input"
+    :class="{ 'ui-file-input_error': false }"
+  >
+    <input
+      type="file"
+      ref="file"
+      @change="selectFiles"
+      :multiple="multiple"
+    />
     <div class="ui-file-input--item">
       <button class="ui-file-input--button" @click="openFileWindow">
         Загрузить документ<span v-if="multiple">ы</span>
@@ -14,25 +22,25 @@
                 Недопустимый формат файла: {{ item.value }}. Допустимые форматы
                 файлов:
                 <span v-for="(format, i) in validExtensions" :key="format">
-                  {{ format
-                  }}<span v-if="i !== validExtensions.length - 1"
-                    >,
-                  </span> </span
-                >.
+                  {{ format }}<span v-if="i !== validExtensions.length - 1">,
+                  </span> </span>.
               </span>
-              <span v-if="item.key === 'file-size-error'"
-                >Размер файла: {{ Math.round(item.value * 100) / 100 }}Мб.
-                Допустимый размер файла: {{ maxFileSize }}Мб.</span
-              >
-              <span v-if="item.key === 'total-size-error'"
-                >Общий размер файлов: {{ Math.round(item.value) / 100 }}Мб.
+
+              <span v-if="item.key === 'file-size-error'">
+                Размер файла: {{ Math.round(item.value * 100) / 100 }}Мб.
+                Допустимый размер файла: {{ maxFileSize }}Мб.
+              </span>
+
+              <span v-if="item.key === 'total-size-error'">
+                Общий размер файлов: {{ Math.round(item.value) / 100 }}Мб.
                 Максимально допустимый размер файлов:
-                {{ maxTotalSize }}Мб.</span
-              >
-              <span v-if="item.key === 'file-count-error'"
-                >Количество файлов: {{ item.value }}. Допустимое количество
-                файлов: {{ maxFileCount }}Мб.</span
-              >
+                {{ maxTotalSize }}Мб.
+              </span>
+
+              <span v-if="item.key === 'file-count-error'">
+                Количество файлов: {{ item.value }}. Допустимое количество
+                файлов: {{ maxFileCount }}Мб.
+              </span>
             </div>
           </div>
         </div>
@@ -56,6 +64,7 @@
             />
           </svg>
         </div>
+
         <div class="ui-file-input--list-item--text">
           <slot name="file" :item="item">
             {{ item.file.name }}

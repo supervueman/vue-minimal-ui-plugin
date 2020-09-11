@@ -4,6 +4,7 @@
     :class="{ 'ui-select_error': errorMessage, 'ui-select_active': isListView }"
   >
     <span v-if="label" class="ui-select--label">{{ label }}</span>
+
     <div class="ui-select--inner">
       <input
         :value="updatedValue"
