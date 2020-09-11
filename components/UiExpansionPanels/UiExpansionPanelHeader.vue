@@ -23,46 +23,40 @@
         default: false
       }
     }
-  }
+  };
 </script>
 
-<style lang="scss" scoped>
-  .ui-expansion-panels--item-header {
-    width: 100%;
-    padding: $gap / 2;
-    background-color: $brand-lighten-color-2;
-    position: relative;
-    transition: background-color 0.3s $cubic;
-    cursor: pointer;
+<style lang="sass" scoped>
+.ui-expansion-panels--item-header
+  padding: $gap / 2
+  width: 100%
+  background-color: $brand-lighten-color-2
+  position: relative
+  transition: background-color 0.3s $cubic
+  cursor: pointer
 
-    &--icon {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 10px;
-      margin-top: auto;
-      margin-bottom: auto;
-      width: 19px;
-      height: 19px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      pointer-events: none;
-      transform-origin: 50% 50%;
-      transition: transform 0.3s $cubic;
-    }
+  &--icon
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 10px
+    margin-top: auto
+    margin-bottom: auto
+    width: 19px
+    height: 19px
+    display: flex
+    align-items: center
+    justify-content: center
+    pointer-events: none
+    transform-origin: 50% 50%
+    transition: transform 0.3s $cubic
 
-    &--icon_default {
-      width: 100%;
-      height: 100%;
-    }
+  &--icon_default
+    width: 100%
+    height: 100%
 
-    &_active {
-      .ui-expansion-panels--item-header {
-        &--icon{
-          transform: rotate(180deg);
-        }
-      }
-    }
-  }
+  &_active
+    .ui-expansion-panels--item-header
+      &--icon
+        transform: rotate(180deg)
 </style>

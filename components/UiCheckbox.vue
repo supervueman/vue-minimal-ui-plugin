@@ -78,54 +78,47 @@
   };
 </script>
 
-<style lang="scss" scoped>
-  .ui-checkbox {
-    display: flex;
-    align-items: center;
-    position: relative;
-    min-height: 20px;
-    padding-left: 20px;
-    input[type="checkbox"] {
-      visibility: hidden;
-      display: none;
-    }
-    &--item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 20px;
-      height: 20px;
-      border-radius: $border-radius;
-      border: 1px solid $brand-darken-color-1;
-      cursor: pointer;
-      transition: background-color 0.3s $cubic;
-      svg {
-        width: 16px;
-        height: 16px;
-        opacity: 0;
-        transition: opacity 0.15s $cubic;
-      }
-    }
-    &--label {
-      margin-left: $gap / 2;
-      cursor: pointer;
-    }
-    input[type="checkbox"]:checked + &--item {
-      background-color: $brand-darken-color-1;
-      svg {
-        opacity: 1;
-      }
-    }
+<style lang="sass" scoped>
+.ui-checkbox
+  display: flex
+  align-items: center
+  position: relative
+  min-height: 20px
+  padding-left: 20px
+  input[type="checkbox"]
+    visibility: hidden
+    display: none
+  &--item
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    left: 0
+    top: 0
+    width: 20px
+    height: 20px
+    border-radius: $border-radius
+    border: 1px solid $brand-darken-color-1
+    cursor: pointer
+    transition: background-color 0.3s $cubic
+    svg
+      width: 16px
+      height: 16px
+      opacity: 0
+      transition: opacity 0.15s $cubic
 
-    input[type="checkbox"]:disabled + &--item {
-      background-color: $light-gray-color;
-      border-color: $light-gray-color;
-      svg {
-        opacity: 1;
-      }
-    }
-  }
+  &--label
+    margin-left: $gap / 2
+    cursor: pointer
+
+  input[type="checkbox"]:checked + &--item
+    background-color: $brand-darken-color-1
+    svg
+      opacity: 1
+
+  input[type="checkbox"]:disabled + &--item
+    background-color: $light-gray-color
+    border-color: $light-gray-color
+    svg
+      opacity: 1
 </style>

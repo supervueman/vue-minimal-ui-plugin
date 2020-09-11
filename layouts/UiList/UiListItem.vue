@@ -10,11 +10,10 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.ui-list-item {
-  list-style-type: none;
-  padding-top: $gap;
-  padding-bottom: $gap;
-  text-transform: uppercase;
-}
+<style lang="sass" scoped>
+.ui-list-item
+  list-style-type: none
+  padding-top: $gap
+  padding-bottom: $gap
+  text-transform: uppercase
 </style>

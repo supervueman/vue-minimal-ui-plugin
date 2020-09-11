@@ -99,109 +99,89 @@
   };
 </script>
 
-<style lang="scss" scoped>
-  .ui-menu {
-    background-color: $brand-color;
-    color: $light-color;
-    cursor: pointer;
-    height: 40px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    border-radius: $border-radius;
-    &--button {
-      padding: 0 $gap * 3 0 $gap;
-      background-color: transparent;
-      height: 100%;
-      width: 100%;
-      border: none;
-      text-transform: uppercase;
-      cursor: pointer;
-      @include on-event {
-        color: $light-color;
-        background-color: $brand-lighten-color-1;
-      }
+<style lang="sass" scoped>
+.ui-menu
+  background-color: $brand-color
+  color: $light-color
+  cursor: pointer
+  height: 40px
+  position: relative
+  display: flex
+  align-items: center
+  border-radius: $border-radius
+  &--button
+    padding: 0 $gap * 3 0 $gap
+    background-color: transparent
+    height: 100%
+    width: 100%
+    border: none
+    text-transform: uppercase
+    cursor: pointer
+    @include on-event
+      color: $light-color
+      background-color: $brand-lighten-color-1
 
-      &::placeholder {
-        color: $light-color;
-      }
-    }
-    &--list {
-      position: fixed;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      border-radius: $border-radius;
-      z-index: 10;
-      overflow-x: hidden;
-      background-color: $brand-color;
-      ul {
-        display: block;
-        padding: 0;
-        margin: 0;
-        li {
-          list-style-type: none;
-        }
-      }
-      &::-webkit-scrollbar {
-        width: 4px;
-      }
-      &-enter-active,
-      &-leave-active {
-        transition: opacity 0.3s $cubic;
-      }
-      &-enter,
-      &-leave-to {
-        opacity: 0;
-      }
-      &-item {
-        padding: $gap / 2;
-        border-bottom: 1px solid $light-color;
-        color: $light-color;
-        transition: color 0.3s, background-color 0.3s;
-        transition-timing-function: $cubic;
-        font-weight: normal;
-        cursor: pointer;
-        @include on-event {
-          color: $light-color;
-          background-color: $brand-lighten-color-1;
-        }
-        &_active {
-          background-color: $brand-lighten-color-1;
-          color: $light-color;
-        }
-      }
-    }
+    &::placeholder
+      color: $light-color
+  &--list
+    position: fixed
+    top: 60px
+    left: 0
+    width: 100%
+    border-radius: $border-radius
+    z-index: 10
+    overflow-x: hidden
+    background-color: $brand-color
+    ul
+      display: block
+      padding: 0
+      margin: 0
+      li
+        list-style-type: none
+    &::-webkit-scrollbar
+      width: 4px
+    &-enter-active,
+    &-leave-active
+      transition: opacity 0.3s $cubic
+    &-enter,
+    &-leave-to
+      opacity: 0
+    &-item
+      padding: $gap / 2
+      border-bottom: 1px solid $light-color
+      color: $light-color
+      transition: color 0.3s, background-color 0.3s
+      transition-timing-function: $cubic
+      font-weight: normal
+      cursor: pointer
+      @include on-event
+        color: $light-color
+        background-color: $brand-lighten-color-1
+      &_active
+        background-color: $brand-lighten-color-1
+        color: $light-color
 
-    &--icon {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 40px;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-left: 1px solid $light-color;
-      &-item {
-        pointer-events: none;
-        transition: transform 0.3s $cubic;
-      }
-    }
-    svg {
-      width: 16px;
-      height: 10px;
-    }
-    path {
-      fill: $light-color;
-    }
-    .list {
-      display: block;
-    }
-    &_active {
-      .ui-menu--icon-item {
-        transform: rotate(180deg);
-      }
-    }
-  }
+  &--icon
+    position: absolute
+    top: 0
+    right: 0
+    width: 40px
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    border-left: 1px solid $light-color
+    &-item
+      pointer-events: none
+      transition: transform 0.3s $cubic
+  svg
+    width: 16px
+    height: 10px
+  path
+    fill: $light-color
+  .list
+    display: block
+  &_active
+    .ui-menu--icon-item
+      transform: rotate(180deg)
 </style>

@@ -9,7 +9,7 @@ export const basic = () => ({
   components: {
     UiAlert
   },
-  template: '<UiAlert :is-active="true" text="Alert"/>'
+  template: '<div><ui-alert :is-active="true" text="Basic" /></div>'
 });
 
 export const errorAlert = () => ({

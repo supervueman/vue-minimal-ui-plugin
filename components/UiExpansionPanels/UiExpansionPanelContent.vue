@@ -21,16 +21,14 @@
         default: null
       },
     }
-  }
+  };
 </script>
 
-<style lang="scss" scoped>
-  .ui-expansion-panels--item-content {
-    width: 100%;
-    transition: height 0.3s $cubic;
-    &--inner {
-      width: 100%;
-      padding: $gap / 2;
-    }
-  }
+<style lang="sass" scoped>
+.ui-expansion-panels--item-content
+  width: 100%
+  transition: height 0.3s $cubic
+  &--inner
+    width: 100%
+    padding: $gap / 2
 </style>

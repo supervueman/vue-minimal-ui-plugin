@@ -41,8 +41,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.ui-layout {
-  width: 100%;
-}
+<style lang="sass" scoped>
+.ui-layout
+  width: 100%
 </style>

@@ -8,25 +8,26 @@
 </template>
 
 <script lang="ts">
-import {Vue, Component, Prop} from 'vue-property-decorator';
+export default {
+  name: 'UiToolbar',
 
-@Component({})
-export default class UiToolbar extends Vue {
-  @Prop({type: Boolean, default: false})
-  private readonly fixed!: boolean;
+  props: {
+    fixed: {
+      type: Boolean,
+      default: false
+    }
+  }
 };
 </script>
 
-<style lang="scss" scoped>
-.ui-toolbar {
-  top: 0;
-  left: 0;
-  width: calc(100% - 1px);
-  display: flex;
-  align-items: center;
-  z-index: z(toolbar);
-  &_fixed {
-    position: fixed;
-  }
-}
+<style lang="sass" scoped>
+.ui-toolbar
+  top: 0
+  left: 0
+  width: calc(100% - 1px)
+  display: flex
+  align-items: center
+  z-index: z(toolbar)
+  &_fixed
+    position: fixed
 </style>

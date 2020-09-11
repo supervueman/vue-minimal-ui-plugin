@@ -23,15 +23,13 @@
   };
 </script>
 
-<style lang="scss" scoped>
-  .ui-divider {
-    background-color: $gray-color;
-    &_horizontal {
-      height: 2px;
-      width: 100%;
-    }
-    &_vertical {
-      width: 2px;
-    }
-  }
+<style lang="sass" scoped>
+  .ui-divider
+    background-color: $gray-color
+    &_horizontal
+      height: 2px
+      width: 100%
+
+    &_vertical
+      width: 2px
 </style>

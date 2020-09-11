@@ -109,73 +109,64 @@
   };
 </script>
 
-<style lang="scss" scoped>
-  .ui-file-input {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    input {
-      display: none;
-    }
-    &--item {
-      width: 216px;
-      margin-right: $gap / 2;
-    }
-    &--footer {
-      font-size: 12px;
-      width: 100%;
-    }
-    &--button {
-      text-transform: uppercase;
-      text-align: center;
-      white-space: nowrap;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 40px;
-      padding: 0 $gap 0 $gap;
-      border: 1px solid $brand-color;
-      color: $brand-color;
-      text-decoration: none;
-      outline: none;
-      letter-spacing: 0.5px;
-      cursor: pointer;
-      border-radius: $border-radius;
-      background-color: $light-color;
-      transition: border-color 0.5s, background-color 0.5s, color 0.5s;
-      transition-timing-function: $cubic;
-      @include on-event {
-        border-color: $brand-lighten-color-1;
-        color: $brand-lighten-color-1;
-      }
-    }
-    &--list {
-      display: flex;
-      flex-wrap: wrap;
-      flex: 1;
-      padding-top: $gap / 2;
-      max-width: 814px;
-      &-item {
-        display: flex;
-        align-items: center;
-        width: 33.33%;
-        margin-bottom: $gap / 2;
-        padding-right: $gap / 2;
-        &--icon {
-          margin-right: $gap / 2;
-          cursor: pointer;
-        }
-        &--text {
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-        }
-      }
-    }
-    &_error {
-      .ui-file-input--button {
-        border-color: $error-color;
-      }
-    }
-  }
+<style lang="sass" scoped>
+  .ui-file-input
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    input
+      display: none
+
+    &--item
+      width: 216px
+      margin-right: $gap / 2
+
+    &--footer
+      font-size: 12px
+      width: 100%
+
+    &--button
+      text-transform: uppercase
+      text-align: center
+      white-space: nowrap
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 40px
+      padding: 0 $gap 0 $gap
+      border: 1px solid $brand-color
+      color: $brand-color
+      text-decoration: none
+      outline: none
+      letter-spacing: 0.5px
+      cursor: pointer
+      border-radius: $border-radius
+      background-color: $light-color
+      transition: border-color 0.5s, background-color 0.5s, color 0.5s
+      transition-timing-function: $cubic
+      @include on-event
+        border-color: $brand-lighten-color-1
+        color: $brand-lighten-color-1
+    &--list
+      display: flex
+      flex-wrap: wrap
+      flex: 1
+      padding-top: $gap / 2
+      max-width: 814px
+      &-item
+        display: flex
+        align-items: center
+        width: 33.33%
+        margin-bottom: $gap / 2
+        padding-right: $gap / 2
+        &--icon
+          margin-right: $gap / 2
+          cursor: pointer
+        &--text
+          white-space: nowrap
+          text-overflow: ellipsis
+          overflow: hidden
+    &_error
+      .ui-file-input--button
+        border-color: $error-color
 </style>

@@ -126,55 +126,46 @@
   }
 </script>
 
-<style lang="scss" scoped>
-.ui-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid $brand-color;
-  // border-radius: $border-radius;
-  height: 40px;
+<style lang="sass" scoped>
+.ui-pagination
+  display: flex
+  align-items: center
+  justify-content: space-between
+  border: 1px solid $brand-color
+  // border-radius: $border-radius
+  height: 40px
   &--list {
-    display: flex;
+    display: flex
     &-item {
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border-right: 1px solid $brand-color;
-      transition: background-color 0.3s $cubic, color 0.3s $cubic;
-      @include on-event {
-        background-color: $brand-color;
-        color: $light-color;
-      }
-      &_active {
-        background-color: $brand-color;
-        color: $light-color;
-      }
-      &_disable {
-        user-select: none;
-        pointer-events: none;
-      }
-    }
-  }
-  &--actions {
-    display: flex;
-  }
-  &--nav {
-    width: 30px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: opacity 0.3s $cubic;
-    &_disable {
-      user-select: none;
-      pointer-events: none;
-      opacity: 0.5;
-    }
-  }
-}
+      width: 40px
+      height: 40px
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+      border-right: 1px solid $brand-color
+      transition: background-color 0.3s $cubic, color 0.3s $cubic
+      @include on-event
+        background-color: $brand-color
+        color: $light-color
+      &_active
+        background-color: $brand-color
+        color: $light-color
+      &_disable
+        user-select: none
+        pointer-events: none
+  &--actions
+    display: flex
+  &--nav
+    width: 30px
+    height: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    transition: opacity 0.3s $cubic
+    &_disable
+      user-select: none
+      pointer-events: none
+      opacity: 0.5
 </style>

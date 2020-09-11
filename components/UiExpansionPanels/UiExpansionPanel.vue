@@ -15,8 +15,8 @@
 </template>
 
 <script>
-  import UiExpansionPanelHeader from "./UiExpansionPanelHeader";
-  import UiExpansionPanelContent from "./UiExpansionPanelContent";
+  import UiExpansionPanelHeader from "./UiExpansionPanelHeader.vue";
+  import UiExpansionPanelContent from "./UiExpansionPanelContent.vue";
 
   export default {
     name: "UiExpansionPanelsItem",
@@ -83,18 +83,15 @@
   };
 </script>
 
-<style lang="scss" scoped>
-  .ui-expansion-panels--item {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    &:last-child {
-      border-bottom: none;
-    }
-  }
-  .is_init {
-    position: absolute;
-    opacity: 0;
-  }
+<style lang="sass" scoped>
+.ui-expansion-panels--item
+  display: flex
+  width: 100%
+  flex-direction: column
+  overflow: hidden
+  &:last-child
+    border-bottom: none
+.is_init
+  position: absolute
+  opacity: 0
 </style>

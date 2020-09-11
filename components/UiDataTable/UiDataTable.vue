@@ -239,10 +239,10 @@
               let compareItems = this.compareItems;
 
               this.compareItems.forEach((el) => {
-                const showItem = compareItems.find((item) =>
+                const showItem = compareItems.find(() =>
                   this.showCheckbox(el)
                 );
-                const existCachedItem = this.buffer.find((item) =>
+                const existCachedItem = this.buffer.find(() =>
                   this.showCheckbox(el)
                 );
 
@@ -292,35 +292,29 @@
   };
 </script>
 
-<style lang="scss" scoped>
-  .ui-data-table {
-    width: 100%;
-    text-align: left;
+<style lang="sass" scoped>
+.ui-data-table
+  text-align: left
+  width: 100%
 
-    &--tr-head {
-      display: block;
-    }
-    table {
-      width: 100%;
-      border-spacing: 0;
-    }
-    tr {
-      position: relative;
-    }
-    td,
-    th {
-      padding: $gap / 2 $gap / 3 $gap / 2 7px;
-    }
+  &--tr-head
+    display: block
+  table
+    width: 100%
+    border-spacing: 0
+  tr
+    position: relative
+  td,
+  th
+    padding: $gap / 2 $gap / 3 $gap / 2 7px
 
-    &--selected-row {
-      background-color: #1ea4ff;
-      color: white;
-    }
-  }
-  .table_empty {
-    width: 100%;
-    background-color: $light-gray-color-2;
-    color: $light-gray-color;
-    padding: $gap;
-  }
+  &--selected-row
+    background-color: #1ea4ff
+    color: white
+
+.table_empty
+  width: 100%
+  background-color: $light-gray-color-2
+  color: $light-gray-color
+  padding: $gap
 </style>

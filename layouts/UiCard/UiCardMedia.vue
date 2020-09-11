@@ -20,9 +20,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.ui-card--media {
-  width: 100%;
-  overflow: hidden;
-}
+<style lang="sass" scoped>
+.ui-card--media
+  width: 100%
+  overflow: hidden
 </style>

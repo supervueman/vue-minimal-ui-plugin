@@ -118,54 +118,49 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-  .ui-drag-and-drop {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: $brand-color;
-    width: 100%;
-    border: 1px dashed $brand-color;
-    border-radius: 3px;
-    background: white;
-    cursor: pointer;
-    &--label {
-      font-size: 14px;
-      color: $brand-color;
-      pointer-events: none;
-      &-hover {
-        opacity: 0.5;
-      }
-    }
-    &--input {
-      display: none;
-    }
-    &-hover {
-      border: 1px solid $brand-color;
-    }
-    &--list {
-      margin-top: $gap / 2;
-      display: flex;
-      flex-wrap: wrap;
-      flex: 1;
-      width: 100%;
-      &-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: $gap / 2;
-        padding-right: $gap / 2;
-        &--text {
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-        }
-        &--icon {
-          flex-shrink: 0;
-          margin-right: $gap / 2;
-          cursor: pointer;
-        }
-      }
-    }
-  }
+<style lang="sass" scoped>
+  .ui-drag-and-drop
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    color: $brand-color
+    width: 100%
+    border: 1px dashed $brand-color
+    border-radius: 3px
+    background: white
+    cursor: pointer
+    &--label
+      font-size: 14px
+      color: $brand-color
+      pointer-events: none
+      &-hover
+        opacity: 0.5
+
+    &--input
+      display: none
+
+    &-hover
+      border: 1px solid $brand-color
+
+    &--list
+      margin-top: $gap / 2
+      display: flex
+      flex-wrap: wrap
+      flex: 1
+      width: 100%
+      &-item
+        display: flex
+        align-items: center
+        margin-bottom: $gap / 2
+        padding-right: $gap / 2
+        &--text
+          white-space: nowrap
+          text-overflow: ellipsis
+          overflow: hidden
+
+        &--icon
+          flex-shrink: 0
+          margin-right: $gap / 2
+          cursor: pointer
 </style>

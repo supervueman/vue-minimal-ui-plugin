@@ -1,6 +1,10 @@
 <template>
-  <div class="ui-scroll-pagination" :style="{'max-height': maxHeight, 'max-width': maxWidth}" @scroll="scrolling">
-    <div class="ui-scroll-pagination--inner" >
+  <div
+    class="ui-scroll-pagination"
+    :style="{'max-height': maxHeight, 'max-width': maxWidth}"
+    @scroll="scrolling"
+  >
+    <div class="ui-scroll-pagination--inner">
       <slot></slot>
     </div>
   </div>
@@ -18,16 +22,16 @@
         default: '100%'
       }
     },
-    data () {
-      return {
-        scrollPosition: 0
-      }
-    },
+
+    data: () => ({
+      scrollPosition: 0
+    }),
+
     methods: {
       scrolling(e) {
-        const maxHeight = e.target.scrollHeight;
-        const scrollUser = e.target.scrollTop;
-        const height = e.target.offsetHeight + scrollUser;
+        const maxHeight = e.target.scrollHeight,
+              scrollUser = e.target.scrollTop,
+              height = e.target.offsetHeight + scrollUser;
 
         if (maxHeight === height && scrollUser > this.scrollPosition) {
           this.$emit('scroll');
@@ -35,15 +39,13 @@
         this.scrollPosition = scrollUser;
       }
     }
-  }
+  };
 </script>
 
-<style lang="scss" scoped>
-.ui-scroll-pagination {
-  height: 100%;
-  overflow-y: auto;
-  &--inner {
-    width: 100%;
-  }
-}
+<style lang="sass" scoped>
+.ui-scroll-pagination
+  height: 100%
+  overflow-y: auto
+  &--inner
+    width: 100%
 </style>

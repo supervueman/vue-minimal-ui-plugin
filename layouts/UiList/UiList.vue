@@ -34,6 +34,7 @@
 
 <script>
 import ConfirmIcon from "@/refactor/components/iconpack/ConfirmIcon.vue";
+
 export default {
   name: "UiList",
   components: { ConfirmIcon },
@@ -82,44 +83,33 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-  .ui-list {
-    /*overflow-x: hidden;*/
-    border-radius: $border-radius;
-    height: 100%;
-    &--item {
-      cursor: pointer;
-      transition: color 0.3s, background-color 0.3s;
-      transition-timing-function: $cubic;
-      @include on-event {
-        color: $light-color;
-        background: $brand-color;
-      }
-      &:last-child {
-        border-bottom: none;
-      }
-      &--icon {
-        margin-right: $gap/2;
-      }
-      &_active {
-        color: $light-color;
-        background: $brand-color;
-      }
-    }
-    &--item-border {
-      border-bottom: 1px solid $light-gray-color;
-    }
-    &--item-no-hover {
-      &:last-child {
-        border-bottom: none;
-      }
-      &--icon {
-        margin-right: $gap/2;
-      }
-      &_active {
-        color: $light-color;
-        background: $brand-color;
-      }
-    }
-  }
+<style lang="sass" scoped>
+  .ui-list
+    /*overflow-x: hidden*/
+    border-radius: $border-radius
+    height: 100%
+    &--item
+      cursor: pointer
+      transition: color 0.3s, background-color 0.3s
+      transition-timing-function: $cubic
+      @include on-event
+        color: $light-color
+        background: $brand-color
+      &:last-child
+        border-bottom: none
+      &--icon
+        margin-right: $gap / 2
+      &_active
+        color: $light-color
+        background: $brand-color
+    &--item-border
+      border-bottom: 1px solid $light-gray-color
+    &--item-no-hover
+      &:last-child
+        border-bottom: none
+      &--icon
+        margin-right: $gap / 2
+      &_active
+        color: $light-color
+        background: $brand-color
 </style>
