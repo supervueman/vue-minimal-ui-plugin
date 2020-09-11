@@ -30,8 +30,6 @@
   export default {
     name: "UiCheckbox",
 
-    mixins: ["themeMixin"],
-
     model: {
       event: "change",
     },

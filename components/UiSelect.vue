@@ -79,7 +79,7 @@
       },
 
       selectedText: {
-        type: String || Number,
+        type: String | Number,
         default: "",
       },
     },
