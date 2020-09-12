@@ -47,7 +47,7 @@
 
     <div class="ui-drag-and-drop--list">
       <div v-for="(item, index) in value" :key="`index: ${index}`" class="ui-drag-and-drop--list-item" :style="getColumns">
-        <DeleteIcon @click="deleteFile(item, index)" class="ui-drag-and-drop--list-item--icon"/>
+        <div @click="deleteFile(item, index)" class="ui-drag-and-drop--list-item--icon">Remove</div>
         <div class="ui-drag-and-drop--list-item--text">
           <slot name="file" :item="item">{{item.file.name}}</slot>
         </div>
@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import valid from "@/refactor/ui-kit/mixins/fileInputValid.js";
+import valid from "../mixins/fileInputValid.js";
 
 export default {
   name: "UiDragAndDropFile",

@@ -33,11 +33,9 @@
 </template>
 
 <script>
-import ConfirmIcon from "@/refactor/components/iconpack/ConfirmIcon.vue";
-
 export default {
   name: "UiList",
-  components: { ConfirmIcon },
+
   props: {
     items: {
       type: Array,

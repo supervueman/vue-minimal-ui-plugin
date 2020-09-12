@@ -57,7 +57,7 @@ export default {
   }),
   computed: {
     validErrors() {
-      return [this.extensionError, this.fileSizeError, this.fileCountError, this.totalSizeError]
+      return [this.extensionError, this.fileSizeError, this.fileCountError, this.totalSizeError];
     }
   },
   methods: {
@@ -91,7 +91,7 @@ export default {
             };
 
             reader.onerror = () => reject();
-          }))
+          }));
         } else {
           this.fileCountError.isError = true;
           this.fileCountError.value = filesPromises.length + this.value.length + 1;
@@ -153,4 +153,4 @@ export default {
       this.$emit('valid', this.validErrors);
     }
   }
-}
+};

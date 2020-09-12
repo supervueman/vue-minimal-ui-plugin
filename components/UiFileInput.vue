@@ -77,7 +77,7 @@
 
 <script>
   // Mixins
-  import valid from "@/refactor/ui-kit/mixins/fileInputValid";
+  import valid from "../mixins/fileInputValid";
 
   export default {
     name: "UiFileInput",
