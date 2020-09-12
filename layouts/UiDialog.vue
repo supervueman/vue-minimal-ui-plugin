@@ -13,9 +13,9 @@
           'max-height': maxHeight
         }"
       >
-        <slot></slot>
+        <slot />
       </div>
-      <div class="ui-dialog--downlay" @click="closeDialog"></div>
+      <div class="ui-dialog--downlay" @click="closeDialog" />
     </div>
   </transition>
 </template>

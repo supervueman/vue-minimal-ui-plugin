@@ -15,8 +15,8 @@
         :required="required"
         :value="value"
         :disabled="disabled"
-        @input="$emit('input', $event.target.value)"
         :style="{ height: height, resize: resize ? '' : 'none' }"
+        @input="$emit('input', $event.target.value)"
       />
     </div>
     <div

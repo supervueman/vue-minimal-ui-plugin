@@ -17,7 +17,7 @@
           @click="$emit('click-item', { item, index })"
         >
           <span v-if="iconStatus" class="ui-list--item--icon">
-            <slot name="iconStatus"></slot>
+            <slot name="iconStatus" />
           </span>
           <slot name="item" :item="item" :index="index">
             {{ item }}
@@ -25,7 +25,7 @@
         </div>
 
         <span v-if="iconAction" class="p-half">
-          <slot name="iconAction" :item="item" :index="index"></slot>
+          <slot name="iconAction" :item="item" :index="index" />
         </span>
       </div>
     </li>

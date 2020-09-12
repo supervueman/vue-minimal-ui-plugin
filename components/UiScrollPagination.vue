@@ -5,7 +5,7 @@
     @scroll="scrolling"
   >
     <div class="ui-scroll-pagination--inner">
-      <slot></slot>
+      <slot />
     </div>
   </div>
 </template>

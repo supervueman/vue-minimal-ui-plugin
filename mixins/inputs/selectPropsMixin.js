@@ -2,23 +2,23 @@ export default {
   props: {
     items: {
       type: Array,
-      default: () => [],
+      default: () => []
     },
     objMode: {
       type: Boolean,
-      default: false,
+      default: false
     },
     itemText: {
       type: String || Number,
-      default: "",
+      default: ""
     },
     returnObject: {
       type: Boolean,
-      default: false,
+      default: false
     },
     multiple: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   }
 };

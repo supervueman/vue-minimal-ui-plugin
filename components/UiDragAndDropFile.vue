@@ -1,21 +1,32 @@
 <template>
   <div>
     <!--  Validation start  -->
-    <div class="ui-file-input--footer" v-if="showDetails">
+    <div
+      v-if="showDetails"
+      class="ui-file-input--footer"
+    >
       <div
         v-for="(item, i) in validErrors"
         :key="`error-${i}`"
       >
         <div v-if="item.isError">
-          <span v-if="item.key === 'extension-error'">Недопустимый формат файла: {{item.value}}. Допустимые форматы файлов:
-            <span v-for="(format, i) in validExtensions" :key="format">
-              {{format}}
-              <span v-if="i !== validExtensions.length - 1">, </span>
+          <span v-if="item.key === 'extension-error'">
+            Недопустимый формат файла: {{ item.value }}. Допустимые форматы файлов:
+            <span v-for="(format, j) in validExtensions" :key="format">
+              {{ format }}
+              <span v-if="j !== validExtensions.length - 1">, </span>
             </span>.
           </span>
-          <span v-if="item.key === 'file-size-error'">Размер файла: {{Math.round(item.value * 100) / 100}}Мб. Допустимый размер файла: {{maxFileSize}}Мб.</span>
-          <span v-if="item.key === 'total-size-error'">Общий размер файлов: {{Math.round(item.value) / 100}}Мб. Максимально допустимый размер файлов: {{maxTotalSize}}Мб.</span>
-          <span v-if="item.key === 'file-count-error'">Количество файлов: {{item.value}}. Допустимое количество файлов: {{maxFileCount}}Мб.</span>
+          <span v-if="item.key === 'file-size-error'">
+            Размер файла: {{ Math.round(item.value * 100) / 100 }}Мб.
+            Допустимый размер файла: {{ maxFileSize }}Мб.
+          </span>
+          <span v-if="item.key === 'total-size-error'">
+            Общий размер файлов: {{ Math.round(item.value) / 100 }}Мб. Максимально допустимый размер файлов: {{ maxTotalSize }}Мб.
+          </span>
+          <span v-if="item.key === 'file-count-error'">
+            Количество файлов: {{ item.value }}. Допустимое количество файлов: {{ maxFileCount }}Мб.
+          </span>
         </div>
       </div>
     </div>
@@ -34,22 +45,36 @@
         class="ui-drag-and-drop--label"
         :class="{'ui-drag-and-drop--label-hover': isHoverFiles}"
       >
-        {{message}}
+        {{ message }}
       </span>
       <input
         type="file"
-        id="fileDrag"
         :multiple="multiple"
         class="ui-drag-and-drop--input"
         @change="addFile"
-      />
+      >
     </label>
 
     <div class="ui-drag-and-drop--list">
-      <div v-for="(item, index) in value" :key="`index: ${index}`" class="ui-drag-and-drop--list-item" :style="getColumns">
-        <div @click="deleteFile(item, index)" class="ui-drag-and-drop--list-item--icon">Remove</div>
+      <div
+        v-for="(item, index) in value"
+        :key="`index: ${index}`"
+        class="ui-drag-and-drop--list-item"
+        :style="getColumns"
+      >
+        <div
+          class="ui-drag-and-drop--list-item--icon"
+          @click="deleteFile(item, index)"
+        >
+          Remove
+        </div>
         <div class="ui-drag-and-drop--list-item--text">
-          <slot name="file" :item="item">{{item.file.name}}</slot>
+          <slot
+            name="file"
+            :item="item"
+          >
+            {{ item.file.name }}
+          </slot>
         </div>
       </div>
     </div>

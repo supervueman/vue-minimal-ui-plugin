@@ -7,7 +7,7 @@
     }"
   >
     <label class="ui-input--inner">
-      <span class="ui-input--label" v-if="label">{{ label }}</span>
+      <span v-if="label" class="ui-input--label">{{ label }}</span>
       <input
         :value="value"
         :name="name"
@@ -17,10 +17,10 @@
         @input="search"
         @focus="isListView = true"
         @blur="isListView = false"
-      />
+      >
     </label>
 
-    <div class="ui-input--footer" v-if="errorMessage">
+    <div v-if="errorMessage" class="ui-input--footer">
       {{ errorMessage }}
     </div>
   </div>
@@ -52,16 +52,12 @@
   export default {
     name: "UiInputSearch",
 
-    created() {
-      this.debounce = debounce(this.searchMethod, this.timing);
-    },
+    mixins: [inputPropsMixin],
 
     model: {
       prop: "selectedItems",
       event: "change",
     },
-
-    mixins: [inputPropsMixin],
 
     props: {
       value: {
@@ -82,6 +78,10 @@
       debounce: () => {},
       isListView: false,
     }),
+
+    created() {
+      this.debounce = debounce(this.searchMethod, this.timing);
+    },
 
     methods: {
       search($event) {

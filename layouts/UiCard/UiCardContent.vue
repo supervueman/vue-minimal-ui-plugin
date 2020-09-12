@@ -3,7 +3,7 @@
     class="ui-card--content"
     :class="{'ui-card--content_flat': $parent.flat}"
   >
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

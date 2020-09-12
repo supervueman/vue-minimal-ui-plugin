@@ -1,34 +1,48 @@
 <template>
-  <div class="ui-tabs" v-bind="$attrs">
+  <div
+    class="ui-tabs"
+    v-bind="$attrs"
+  >
     <div class="ui-tabs--bar">
-      <div v-if="headersTabs.length && isHiddenTabs && isLastHidden" class="ui-tabs__arrow" @click="$emit('next', 'next')">
-        <ArrowIcon />
-      </div>
-      <div v-if="headersTabs.length && headersTabs[0].hidden && isHiddenTabs" class="ui-tabs__arrow ui-tabs__arrow--left" @click="$emit('prev', 'prev')">
-        <ArrowIcon />
+      <div
+        v-if="headersTabs.length && isHiddenTabs && isLastHidden"
+        class="ui-tabs__arrow"
+        @click="$emit('next', 'next')"
+      >
+        prev
       </div>
       <div
+        v-if="headersTabs.length && headersTabs[0].hidden && isHiddenTabs"
+        class="ui-tabs__arrow ui-tabs__arrow--left"
+        @click="$emit('prev', 'prev')"
+      >
+        next
+      </div>
+
+      <div
         v-for="(tab, i) in count"
+        :key="`tab-${i}`"
         class="ui-tabs--bar-item"
         :class="{
           'ui-tabs--bar-item_active': i + 1 === value,
           'hidden': headersTabs.length ? headersTabs[i].hidden : false,
           'ui-tabs--bar-item_disabled': headersTabs.length ? headersTabs[i].disabled : false
         }"
-        :key="`tab-${i}`"
         @click="changeItem(i + 1)"
       >
         <slot
           name="tab"
           :tab="tab"
         >
-          {{i + 1}}
+          {{ i + 1 }}
         </slot>
       </div>
     </div>
 
     <div class="ui-tabs--body">
-      <transition-group name="tab-slide-right" tag="div">
+      <transition-group
+        name="tab-slide-right"
+      >
         <slot name="tabs-body" />
       </transition-group>
     </div>
@@ -61,20 +75,20 @@ export default {
     index: 1,
   }),
 
-  created() {
-    this.index = this.value;
-  },
-
   computed: {
-    isHiddenTabs () {
+    isHiddenTabs() {
       return this.headersTabs.length && this.headersTabs.some(v => v.hidden)
     },
-    isLastHidden () {
+    isLastHidden() {
       return this.headersTabs.length && this.headersTabs[this.headersTabs.length - 1].hidden
     }
   },
 
-  mounted () {
+  created() {
+    this.index = this.value;
+  },
+
+  mounted() {
     if (this.$slots['tabs-body']) {
       this.count = this.$slots['tabs-body'].length;
     }

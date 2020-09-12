@@ -6,11 +6,11 @@
     <input
       type="checkbox"
       :checked="checked"
-      @input="input"
-      @change="change"
       :disabled="disabled"
       :name="name"
-    />
+      @input="input"
+      @change="change"
+    >
     <span class="ui-checkbox--item">
       <svg width="19" height="14" viewBox="0 0 19 14" fill="none">
         <path
@@ -22,7 +22,12 @@
         />
       </svg>
     </span>
-    <span v-if="label" class="ui-checkbox--label">{{ label }}</span>
+    <span
+      v-if="label"
+      class="ui-checkbox--label"
+    >
+      {{ label }}
+    </span>
   </label>
 </template>
 

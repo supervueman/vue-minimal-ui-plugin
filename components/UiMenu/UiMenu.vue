@@ -8,15 +8,15 @@
   >
     <input
       class="ui-menu--button item"
-      @click="$emit('click-button', $event)"
+      readonly
       :placeholder="label"
+      @click="$emit('click-button', $event)"
       @focus="openListClick"
       @blur="closeListClick"
-      readonly
-    />
+    >
 
     <transition name="ui-menu--list">
-      <div class="ui-menu--list list" v-show="isListView">
+      <div v-show="isListView" class="ui-menu--list list">
         <ul>
           <li
             v-for="(item, i) in items"
@@ -24,7 +24,9 @@
             class="ui-menu--list-item"
             @click="$emit('click-list-item', item)"
           >
-            <slot name="item" :item="item">{{ item }}</slot>
+            <slot name="item" :item="item">
+              {{ item }}
+            </slot>
           </li>
         </ul>
       </div>

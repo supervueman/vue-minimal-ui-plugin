@@ -3,7 +3,7 @@
     class="ui-container"
     :class="{'ui-container_big': big}"
   >
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

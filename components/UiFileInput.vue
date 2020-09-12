@@ -4,25 +4,28 @@
     :class="{ 'ui-file-input_error': false }"
   >
     <input
-      type="file"
       ref="file"
-      @change="selectFiles"
+      type="file"
       :multiple="multiple"
-    />
+      @change="selectFiles"
+    >
     <div class="ui-file-input--item">
-      <button class="ui-file-input--button" @click="openFileWindow">
+      <button
+        class="ui-file-input--button"
+        @click="openFileWindow"
+      >
         Загрузить документ<span v-if="multiple">ы</span>
       </button>
 
       <slot name="errors" :error="validErrors">
-        <div class="ui-file-input--footer" v-if="showDetails">
+        <div v-if="showDetails" class="ui-file-input--footer">
           <div v-for="(item, i) in validErrors" :key="`error-${i}`">
             <div v-if="item.isError">
               <span v-if="item.key === 'extension-error'">
                 Недопустимый формат файла: {{ item.value }}. Допустимые форматы
                 файлов:
-                <span v-for="(format, i) in validExtensions" :key="format">
-                  {{ format }}<span v-if="i !== validExtensions.length - 1">,
+                <span v-for="(format, j) in validExtensions" :key="format">
+                  {{ format }}<span v-if="j !== validExtensions.length - 1">,
                   </span> </span>.
               </span>
 
@@ -49,9 +52,9 @@
 
     <div v-if="showContent" class="ui-file-input--list">
       <div
-        class="ui-file-input--list-item"
         v-for="(item, i) in value"
         :key="`${item.name}-${i}`"
+        class="ui-file-input--list-item"
       >
         <div
           class="ui-file-input--list-item--icon"

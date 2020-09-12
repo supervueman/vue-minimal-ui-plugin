@@ -3,7 +3,7 @@
     class="ui-toolbar"
     :class="{'ui-toolbar_fixed': fixed}"
   >
-    <slot></slot>
+    <slot />
   </header>
 </template>
 

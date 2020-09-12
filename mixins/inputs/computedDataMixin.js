@@ -7,9 +7,9 @@ export default {
         );
       }
       if (this.objMode && this.itemText) {
-        return this.items.map((el) => el[this.itemText]);
+        return this.items.map(el => el[this.itemText]);
       }
       return this.items;
-    },
+    }
   }
 };

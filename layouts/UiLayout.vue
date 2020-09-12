@@ -3,7 +3,7 @@
     class="ui-layout"
     :style="{'max-width': maxWidth, 'min-width': minWidth, 'max-height': maxHeight, 'min-height': minHeight, 'overflow-x': overflowX, 'overflow-y': overflowY}"
   >
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

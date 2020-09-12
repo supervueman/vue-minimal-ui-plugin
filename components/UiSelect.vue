@@ -7,6 +7,7 @@
 
     <div class="ui-select--inner">
       <input
+        ref="input"
         :value="updatedValue"
         :placeholder="placeholder"
         :disabled="disabled"
@@ -15,8 +16,7 @@
         readonly
         @focus="isListView = true"
         @blur="listViewChange"
-        ref="input"
-      />
+      >
 
       <div class="ui-select--icon">
         <slot name="icon">
@@ -84,18 +84,6 @@
       },
     },
 
-    created() {
-      if (this.multiple) {
-        document.addEventListener("click", this.closeListViewWhenMultiple);
-      }
-    },
-
-    destroyed() {
-      if (this.multiple) {
-        document.removeEventListener("click", this.closeListViewWhenMultiple);
-      }
-    },
-
     data: () => ({
       isListView: false,
     }),
@@ -114,6 +102,18 @@
         }
         return this.value;
       },
+    },
+
+    created() {
+      if (this.multiple) {
+        document.addEventListener("click", this.closeListViewWhenMultiple);
+      }
+    },
+
+    destroyed() {
+      if (this.multiple) {
+        document.removeEventListener("click", this.closeListViewWhenMultiple);
+      }
     },
 
     methods: {

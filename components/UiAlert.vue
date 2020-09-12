@@ -1,14 +1,14 @@
 <template>
   <transition name="ui-alert">
     <div
-      class="ui-alert"
+      v-if="isActive"
       :class="{
         'ui-alert_success': alertType === 'success',
         'ui-alert_warning': alertType === 'warning',
         'ui-alert_error': alertType === 'error',
         'ui-alert_fill': fill
       }"
-      v-if="isActive"
+      class="ui-alert"
     >
       {{ text }}
     </div>

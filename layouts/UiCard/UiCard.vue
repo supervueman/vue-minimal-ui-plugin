@@ -4,7 +4,7 @@
     :class="{'ui-card_flat': flat, 'ui-card_error': type === 'error', 'ui-card_success': type === 'success'}"
     :style="{'max-width': maxWidth, 'min-width' : minWidth, 'max-height' : maxHeight, 'min-height': minHeight}"
   >
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

@@ -1,7 +1,13 @@
 <template>
-  <div class="ui-data-table" v-bind="$attrs">
+  <div
+    class="ui-data-table"
+    v-bind="$attrs"
+  >
     <table v-if="compareItems.length">
-      <slot name="search-bar" v-if="showSearchBar"></slot>
+      <slot
+        v-if="showSearchBar"
+        name="search-bar"
+      />
 
       <thead>
         <tr>
@@ -11,25 +17,45 @@
           >
             <label>
               <UiCheckbox
-                @change="toggleAll"
                 :checked="value.length === items.length"
+                @change="toggleAll"
               />
             </label>
           </th>
-          <slot name="header-additional-row-start"></slot>
-          <th v-for="(item, i) in headers" :key="`text-${i}`">
-            <slot name="header-row" :item="item.text">
-              <div v-if="showHeader">{{ item.text }}</div>
+
+          <slot name="header-additional-row-start" />
+
+          <th
+            v-for="(item, i) in headers"
+            :key="`text-${i}`"
+          >
+            <slot
+              name="header-row"
+              :item="item.text"
+            >
+              <div v-if="showHeader">
+                {{ item.text }}
+              </div>
             </slot>
           </th>
-          <slot name="header-additional-row-end"></slot>
+          <slot name="header-additional-row-end" />
         </tr>
       </thead>
 
-      <tbody v-for="(item, i) in compareItems" :key="`tbody-${i}`">
-        <tr v-if="showRowHeader" class="ui-data-table--body-row--header">
-          <slot name="body-row-header" :item="item"></slot>
+      <tbody
+        v-for="(item, i) in compareItems"
+        :key="`tbody-${i}`"
+      >
+        <tr
+          v-if="showRowHeader"
+          class="ui-data-table--body-row--header"
+        >
+          <slot
+            name="body-row-header"
+            :item="item"
+          />
         </tr>
+
         <tr
           class="ui-data-table--body-row pointer"
           :class="{
@@ -39,7 +65,10 @@
           }"
           @click="selectRow(item)"
         >
-          <td v-if="showSelect && items.length" class="check-td">
+          <td
+            v-if="showSelect && items.length"
+            class="check-td"
+          >
             <UiCheckbox
               v-if="showCheckbox(item)"
               :dataValue="item"
@@ -47,8 +76,15 @@
               @change="toggleItem"
             />
           </td>
-          <slot name="body-row" :item="item" :index="i">
-            <td v-for="(innerItem, i) in item" :key="`innerItem${i}`">
+          <slot
+            name="body-row"
+            :item="item"
+            :index="i"
+          >
+            <td
+              v-for="(innerItem, j) in item"
+              :key="`innerItem${j}`"
+            >
               {{ innerItem }}
             </td>
           </slot>
@@ -56,8 +92,13 @@
       </tbody>
     </table>
 
-    <div v-else class="table_empty text-center">
-      <h3 class="text-uppercase">{{ noDataMessage }}</h3>
+    <div
+      v-else
+      class="table_empty text-center"
+    >
+      <h3 class="text-uppercase">
+        {{ noDataMessage }}
+      </h3>
     </div>
   </div>
 </template>

@@ -1,17 +1,17 @@
 <template>
   <div
-    class="ui-pagination"
     v-if="items.length"
+    class="ui-pagination"
   >
     <ul class="ui-pagination--list">
       <li
-        class="ui-pagination--list-item"
-        :class="{'ui-pagination--list-item_active': item === value, 'ui-pagination--list-item_disable': item === '...'}"
         v-for="(item, i) in items"
         :key="`${item}-${i}`"
+        class="ui-pagination--list-item"
+        :class="{'ui-pagination--list-item_active': item === value, 'ui-pagination--list-item_disable': item === '...'}"
         @click="$emit('input', item)"
       >
-        {{item}}
+        {{ item }}
       </li>
     </ul>
     <ul class="ui-pagination--actions">
@@ -21,7 +21,7 @@
         @click="$emit('input', value - 1)"
       >
         <svg width="9" height="18" viewBox="0 0 9 18" fill="none">
-          <path d="M8.69995 0L-4.90722e-05 8.69992L8.69995 17.3998L8.69995 0Z" fill="#1FA5FF"/>
+          <path d="M8.69995 0L-4.90722e-05 8.69992L8.69995 17.3998L8.69995 0Z" fill="#1FA5FF" />
         </svg>
       </li>
       <li
@@ -30,7 +30,7 @@
         @click="$emit('input', value + 1)"
       >
         <svg width="9" height="18" viewBox="0 0 9 18" fill="none">
-          <path d="M0 17.3999L8.7 8.69998L0 6.1209e-05L0 17.3999Z" fill="#1FA5FF"/>
+          <path d="M0 17.3999L8.7 8.69998L0 6.1209e-05L0 17.3999Z" fill="#1FA5FF" />
         </svg>
       </li>
     </ul>
@@ -64,7 +64,7 @@
       },
     },
 
-    data: ()  => {
+    data: () => {
       return {
         maxButtons: 0,
         selected: null,
@@ -111,7 +111,7 @@
     },
 
     methods: {
-      range (from, to) {
+      range(from, to) {
         const range = [];
 
         from = from > 0 ? from : 1;
@@ -134,9 +134,9 @@
   border: 1px solid $brand-color
   // border-radius: $border-radius
   height: 40px
-  &--list {
+  &--list
     display: flex
-    &-item {
+    &-item
       width: 40px
       height: 40px
       display: flex

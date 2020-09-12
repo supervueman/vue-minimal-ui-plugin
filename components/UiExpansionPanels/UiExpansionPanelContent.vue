@@ -3,10 +3,8 @@
     class="ui-expansion-panels--item-content"
     :style="{'height': height !== null && height !== undefined ? `${height}px` : ''}"
   >
-    <div
-      class="ui-expansion-panels--item-content--inner"
-    >
-      <slot/>
+    <div class="ui-expansion-panels--item-content--inner">
+      <slot />
     </div>
   </div>
 </template>

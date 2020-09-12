@@ -21,19 +21,20 @@
   export default {
     name: "UiExpansionPanelsItem",
 
+    components: {
+      UiExpansionPanelHeader,
+      UiExpansionPanelContent
+    },
+
     props: {
       watchItem: {
+        type: Object | Array | String | Number | Symbol,
         default: null
       },
       active: {
         type: Boolean,
         default: false
       }
-    },
-
-    components: {
-      UiExpansionPanelHeader,
-      UiExpansionPanelContent
     },
 
     data: () => ({

@@ -1,6 +1,6 @@
 <template>
   <div class="ui-expansion-panels">
-    <slot/>
+    <slot />
   </div>
 </template>
 

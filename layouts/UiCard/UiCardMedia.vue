@@ -3,7 +3,7 @@
     class="ui-card--media"
     :style="{'max-width': maxWidth}"
   >
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

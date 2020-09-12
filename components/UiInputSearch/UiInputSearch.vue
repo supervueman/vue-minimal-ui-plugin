@@ -17,7 +17,7 @@
         @input="search"
         @focus="isListView = true"
         @blur="isListView = false"
-      />
+      >
       <div class="ui-input--icon">
         <slot name="icon">
           <svg
@@ -56,7 +56,10 @@
       </transition>
     </div>
 
-    <div class="ui-input--footer" v-if="errorMessage">
+    <div
+      v-if="errorMessage"
+      class="ui-input--footer"
+    >
       {{ errorMessage }}
     </div>
   </div>
@@ -91,16 +94,12 @@
   export default {
     name: "UiInputSearch",
 
-    created() {
-      this.debounce = debounce(this.searchMethod, this.timing);
-    },
+    mixins: [inputPropsMixin, selectPropsMixin, dropListMixin, computedDataMixin],
 
     model: {
       prop: "selectedItems",
       event: "change",
     },
-
-    mixins: [inputPropsMixin, selectPropsMixin, dropListMixin, computedDataMixin],
 
     props: {
       value: {
@@ -156,7 +155,12 @@
             (el) => el[this.returnField] === this.value
           );
         }
+        return [];
       },
+    },
+
+    created() {
+      this.debounce = debounce(this.searchMethod, this.timing);
     },
 
     methods: {
@@ -170,7 +174,7 @@
         let selectedItem = {};
 
         if (this.multiple) {
-          files.push(...this.items);
+          items.push(...this.items);
         }
 
         if (this.objMode) {

@@ -11,6 +11,7 @@ module.exports = {
     parser: 'babel-eslint',
   },
   rules: {
+    'semi': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'quotes': 'off',
@@ -33,6 +34,8 @@ module.exports = {
     'no-shadow': 'off',
     'no-useless-escape': 'off',
     'prefer-arrow-callback': 'off',
-
+    'arrow-parens': 'off',
+    'prefer-promise-reject-errors': 'off',
+    'vue/attribute-hyphenation': 'off'
   },
 };

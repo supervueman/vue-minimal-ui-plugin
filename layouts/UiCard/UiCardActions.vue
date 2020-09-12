@@ -3,7 +3,7 @@
     class="ui-card--actions"
     :class="{'ui-card--actions_flat': $parent.flat}"
   >
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

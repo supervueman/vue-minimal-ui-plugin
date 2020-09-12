@@ -33,6 +33,7 @@ export default {
       default: true
     }
   },
+
   data: () => ({
     extensionError: {
       key: 'extension-error',
@@ -63,6 +64,7 @@ export default {
   methods: {
     filePromiseCollect(uploadFiles, files) {
       const filesPromises = [];
+
       uploadFiles.forEach(file => {
         this.valid(file);
 
@@ -97,13 +99,13 @@ export default {
           this.fileCountError.value = filesPromises.length + this.value.length + 1;
         }
       });
-        return filesPromises;
+      return filesPromises;
     },
 
     deleteFile(item, index) {
       const files = this.value.filter((el, i) => i !== index);
       this.$emit('change', files);
-      this.$emit('delete', {item, index});
+      this.$emit('delete', { item, index });
       this.valid(item.file, 'delete');
     },
 
@@ -115,7 +117,7 @@ export default {
      * This function called in select file and deleteFile therefore use operation argument
      */
 
-    valid(file, operation="upload") {
+    valid(file, operation = "upload") {
       // Valid max files count
       if (file && this.value.length === this.maxFileCount && operation !== 'upload') {
         this.fileCountError.isError = false;
