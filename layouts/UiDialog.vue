@@ -6,7 +6,7 @@
       :class="{ 'ui-dialog_active': value }"
     >
       <div
-        class="ui-dialog--content shadow"
+        class="ui-dialog--content"
         :style="{
           'max-width': maxWidth,
           'min-width': minWidth,
