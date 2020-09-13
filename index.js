@@ -3,9 +3,6 @@ import Vue from 'vue';
 /* ==============================================
  * ================= Layouts ====================
  */
-import UiLayout from "./layouts/UiLayout";
-import UiContainer from "./layouts/UiContainer";
-import UiToolbar from "./layouts/UiToolbar";
 // Card
 import UiCard from "./layouts/UiCard/UiCard";
 import UiCardHeader from "./layouts/UiCard/UiCardHeader";
@@ -38,9 +35,6 @@ import UiList from "./components/UiList/UiList";
 
 const components = {
   // Layouts
-  UiLayout,
-  UiContainer,
-  UiToolbar,
   // Card
   UiCard,
   UiCardHeader,
