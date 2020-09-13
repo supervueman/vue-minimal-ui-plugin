@@ -1,7 +1,7 @@
 <template>
   <div
-    class="ui-file-input"
-    :class="{ 'ui-file-input_error': false }"
+    class="file-input"
+    :class="{ 'file-input_error': false }"
   >
     <input
       ref="file"
@@ -9,16 +9,16 @@
       :multiple="multiple"
       @change="selectFiles"
     >
-    <div class="ui-file-input--item">
+    <div class="file-input--item">
       <button
-        class="ui-file-input--button"
+        class="file-input--button"
         @click="openFileWindow"
       >
         Загрузить документ<span v-if="multiple">ы</span>
       </button>
 
       <slot name="errors" :error="validErrors">
-        <div v-if="showDetails" class="ui-file-input--footer">
+        <div v-if="showDetails" class="file-input--footer">
           <div v-for="(item, i) in validErrors" :key="`error-${i}`">
             <div v-if="item.isError">
               <span v-if="item.key === 'extension-error'">
@@ -50,14 +50,14 @@
       </slot>
     </div>
 
-    <div v-if="showContent" class="ui-file-input--list">
+    <div v-if="showContent" class="file-input--list">
       <div
         v-for="(item, i) in value"
         :key="`${item.name}-${i}`"
-        class="ui-file-input--list-item"
+        class="file-input--list-item"
       >
         <div
-          class="ui-file-input--list-item--icon"
+          class="file-input--list-item--icon"
           @click="deleteFile(item, i)"
         >
           <svg width="14" height="18" viewBox="0 0 14 18" fill="none">
@@ -68,7 +68,7 @@
           </svg>
         </div>
 
-        <div class="ui-file-input--list-item--text">
+        <div class="file-input--list-item--text">
           <slot name="file" :item="item">
             {{ item.file.name }}
           </slot>
@@ -122,7 +122,7 @@
 </script>
 
 <style lang="sass" scoped>
-  .ui-file-input
+  .file-input
     display: flex
     align-items: flex-start
     justify-content: flex-start
@@ -179,6 +179,6 @@
           text-overflow: ellipsis
           overflow: hidden
     &_error
-      .ui-file-input--button
+      .file-input--button
         border-color: $error-color
 </style>

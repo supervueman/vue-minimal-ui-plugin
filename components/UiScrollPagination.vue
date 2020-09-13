@@ -1,10 +1,10 @@
 <template>
   <div
-    class="ui-scroll-pagination"
+    class="scroll-pagination"
     :style="{'max-height': maxHeight, 'max-width': maxWidth}"
     @scroll="scrolling"
   >
-    <div class="ui-scroll-pagination--inner">
+    <div class="scroll-pagination--inner">
       <slot />
     </div>
   </div>
@@ -43,7 +43,7 @@
 </script>
 
 <style lang="sass" scoped>
-.ui-scroll-pagination
+.scroll-pagination
   height: 100%
   overflow-y: auto
   &--inner

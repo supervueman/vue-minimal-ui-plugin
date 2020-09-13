@@ -1,7 +1,7 @@
 <template>
   <div
-    class="ui-divider"
-    :class="{'ui-divider_horizontal': horizontal, 'ui-divider_vertical': vertical}"
+    class="divider"
+    :class="{'divider_horizontal': horizontal, 'divider_vertical': vertical}"
   >
   </div>
 </template>
@@ -24,7 +24,7 @@
 </script>
 
 <style lang="sass" scoped>
-  .ui-divider
+  .divider
     background-color: $gray-color
     &_horizontal
       height: 2px

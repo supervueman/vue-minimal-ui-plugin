@@ -1,23 +1,23 @@
 <template>
   <div
     v-if="items.length"
-    class="ui-pagination"
+    class="pagination"
   >
-    <ul class="ui-pagination--list">
+    <ul class="pagination--list">
       <li
         v-for="(item, i) in items"
         :key="`${item}-${i}`"
-        class="ui-pagination--list-item"
-        :class="{'ui-pagination--list-item_active': item === value, 'ui-pagination--list-item_disable': item === '...'}"
+        class="pagination--list-item"
+        :class="{'pagination--list-item_active': item === value, 'pagination--list-item_disable': item === '...'}"
         @click="$emit('input', item)"
       >
         {{ item }}
       </li>
     </ul>
-    <ul class="ui-pagination--actions">
+    <ul class="pagination--actions">
       <li
-        class="ui-pagination--nav"
-        :class="{'ui-pagination--nav_disable': value === 1}"
+        class="pagination--nav"
+        :class="{'pagination--nav_disable': value === 1}"
         @click="$emit('input', value - 1)"
       >
         <svg width="9" height="18" viewBox="0 0 9 18" fill="none">
@@ -25,8 +25,8 @@
         </svg>
       </li>
       <li
-        class="ui-pagination--nav"
-        :class="{'ui-pagination--nav_disable': value === length}"
+        class="pagination--nav"
+        :class="{'pagination--nav_disable': value === length}"
         @click="$emit('input', value + 1)"
       >
         <svg width="9" height="18" viewBox="0 0 9 18" fill="none">
@@ -127,7 +127,7 @@
 </script>
 
 <style lang="sass" scoped>
-.ui-pagination
+.pagination
   display: flex
   align-items: center
   justify-content: space-between

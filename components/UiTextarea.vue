@@ -1,17 +1,17 @@
 <template>
   <div
     v-bind="$attrs"
-    class="ui-textarea"
-    :class="{ 'ui-textarea--error': errorMessage && hasError }"
+    class="textarea"
+    :class="{ 'textarea--error': errorMessage && hasError }"
   >
-    <div class="ui-textarea--inner">
-      <span class="ui-textarea--label">
+    <div class="textarea--inner">
+      <span class="textarea--label">
         {{ label }}
       </span>
 
       <textarea
-        class="ui-textarea--item"
-        :class="{ 'ui-textarea--error': hasError }"
+        class="textarea--item"
+        :class="{ 'textarea--error': hasError }"
         :name="name"
         :placeholder="placeholder"
         :maxlength="maxlength"
@@ -25,7 +25,7 @@
 
     <div
       v-if="errorMessage && hasError"
-      class="ui-textarea--footer"
+      class="textarea--footer"
     >
       {{ errorMessage }}
     </div>
@@ -66,7 +66,7 @@
 </script>
 
 <style lang="sass" scoped>
-.ui-textarea
+.textarea
   padding-bottom: 12px
   color: $dark-color
   position: relative

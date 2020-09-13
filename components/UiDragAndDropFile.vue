@@ -3,7 +3,7 @@
     <!--  Validation start  -->
     <div
       v-if="showDetails"
-      class="ui-file-input--footer"
+      class="file-input--footer"
     >
       <div
         v-for="(item, i) in validErrors"
@@ -33,8 +33,8 @@
     <!--  Validation end  -->
 
     <label
-      class="ui-drag-and-drop"
-      :class="{'ui-drag-and-drop-hover': isHoverFiles}"
+      class="drag-and-drop"
+      :class="{'drag-and-drop-hover': isHoverFiles}"
       for="fileDrag"
       @drop.prevent="addFile"
       @dragover.prevent
@@ -42,33 +42,33 @@
       @dragleave="fileLeave"
     >
       <span
-        class="ui-drag-and-drop--label"
-        :class="{'ui-drag-and-drop--label-hover': isHoverFiles}"
+        class="drag-and-drop--label"
+        :class="{'drag-and-drop--label-hover': isHoverFiles}"
       >
         {{ message }}
       </span>
       <input
         type="file"
         :multiple="multiple"
-        class="ui-drag-and-drop--input"
+        class="drag-and-drop--input"
         @change="addFile"
       >
     </label>
 
-    <div class="ui-drag-and-drop--list">
+    <div class="drag-and-drop--list">
       <div
         v-for="(item, index) in value"
         :key="`index: ${index}`"
-        class="ui-drag-and-drop--list-item"
+        class="drag-and-drop--list-item"
         :style="getColumns"
       >
         <div
-          class="ui-drag-and-drop--list-item--icon"
+          class="drag-and-drop--list-item--icon"
           @click="deleteFile(item, index)"
         >
           Remove
         </div>
-        <div class="ui-drag-and-drop--list-item--text">
+        <div class="drag-and-drop--list-item--text">
           <slot
             name="file"
             :item="item"
@@ -152,7 +152,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.ui-drag-and-drop
+.drag-and-drop
   display: flex
   align-items: center
   justify-content: center

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="ui-card--media"
+    class="card--media"
     :style="{'max-width': maxWidth}"
   >
     <slot />
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.ui-card--media
+.card--media
   width: 100%
   overflow: hidden
 </style>

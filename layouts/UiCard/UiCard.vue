@@ -1,7 +1,7 @@
 <template>
   <div
-    class="ui-card"
-    :class="{'ui-card_error': type === 'error', 'ui-card_success': type === 'success'}"
+    class="card"
+    :class="{'card_error': type === 'error', 'card_success': type === 'success'}"
     :style="{'max-width': maxWidth, 'min-width' : minWidth, 'max-height' : maxHeight, 'min-height': minHeight}"
   >
     <slot />
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.ui-card
+.card
   border: 1px solid $dark-color
   color: $dark-color
   position: relative

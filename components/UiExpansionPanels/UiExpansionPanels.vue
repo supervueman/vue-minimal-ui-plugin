@@ -1,5 +1,5 @@
 <template>
-  <div class="ui-expansion-panels">
+  <div class="expansion-panels">
     <slot />
   </div>
 </template>
@@ -11,7 +11,7 @@
 </script>
 
 <style lang="sass" scoped>
-.ui-expansion-panels
+.expansion-panels
   display: flex
   flex-direction: column
   overflow: hidden

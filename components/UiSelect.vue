@@ -1,35 +1,35 @@
 <template>
   <div
-    class="ui-select"
+    class="select"
     :class="{
-      'ui-select_error': errorMessage,
-      'ui-select_active': isListView
+      'select_error': errorMessage,
+      'select_active': isListView
     }"
   >
     <span
       v-if="label"
-      class="ui-select--label"
+      class="select--label"
     >
       {{ label }}
     </span>
 
-    <div class="ui-select--inner">
+    <div class="select--inner">
       <input
         ref="input"
         :value="updatedValue"
         :placeholder="placeholder"
         :disabled="disabled"
-        class="ui-select--item item"
-        :class="{ 'ui-select--item_active': isListView }"
+        class="select--item item"
+        :class="{ 'select--item_active': isListView }"
         readonly
         @focus="isListView = true"
         @blur="listViewChange"
       >
 
-      <div class="ui-select--icon">
+      <div class="select--icon">
         <slot name="icon">
           <svg
-            class="ui-select--icon_default"
+            class="select--icon_default"
             width="16"
             height="10"
             viewBox="0 0 16 10"
@@ -43,17 +43,17 @@
         </slot>
       </div>
 
-      <transition name="ui-select--list">
+      <transition name="select--list">
         <div
           v-if="isListView && parseItems.length > 0"
-          class="ui-select--list list"
+          class="select--list list"
         >
           <div
             v-for="item in parseItems"
             :key="item"
-            class="ui-select--list-item"
+            class="select--list-item"
             :class="{
-              'ui-select--list-item_active': activeItem(item),
+              'select--list-item_active': activeItem(item),
             }"
             @click="selectItem(item)"
           >
@@ -65,7 +65,7 @@
 
     <div
       v-if="errorMessage"
-      class="ui-select--footer"
+      class="select--footer"
     >
       {{ errorMessage }}
     </div>
@@ -183,7 +183,7 @@
       },
 
       closeListViewWhenMultiple(event) {
-        if (!event.target.closest(".ui-select")) {
+        if (!event.target.closest(".select")) {
           this.isListView = false;
         }
       },
@@ -192,7 +192,7 @@
 </script>
 
 <style lang="sass" scoped>
-.ui-select
+.select
   padding-bottom: 12px
   position: relative
   cursor: pointer
@@ -285,12 +285,12 @@
     color: $error-color
 
   &_active
-    .ui-select
+    .select
       &--icon
         transform: rotate(180deg)
 
   &_error
-    .ui-select--item
+    .select--item
       border-right-color: $error-color
 
 .list

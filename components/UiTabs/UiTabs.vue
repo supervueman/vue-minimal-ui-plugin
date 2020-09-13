@@ -1,19 +1,19 @@
 <template>
   <div
-    class="ui-tabs"
+    class="tabs"
     v-bind="$attrs"
   >
-    <div class="ui-tabs--bar">
+    <div class="tabs--bar">
       <div
         v-if="headersTabs.length && isHiddenTabs && isLastHidden"
-        class="ui-tabs__arrow"
+        class="tabs__arrow"
         @click="$emit('next', 'next')"
       >
         prev
       </div>
       <div
         v-if="headersTabs.length && headersTabs[0].hidden && isHiddenTabs"
-        class="ui-tabs__arrow ui-tabs__arrow--left"
+        class="tabs__arrow tabs__arrow--left"
         @click="$emit('prev', 'prev')"
       >
         next
@@ -22,11 +22,11 @@
       <div
         v-for="(tab, i) in count"
         :key="`tab-${i}`"
-        class="ui-tabs--bar-item"
+        class="tabs--bar-item"
         :class="{
-          'ui-tabs--bar-item_active': i + 1 === value,
+          'tabs--bar-item_active': i + 1 === value,
           'hidden': headersTabs.length ? headersTabs[i].hidden : false,
-          'ui-tabs--bar-item_disabled': headersTabs.length ? headersTabs[i].disabled : false
+          'tabs--bar-item_disabled': headersTabs.length ? headersTabs[i].disabled : false
         }"
         @click="changeItem(i + 1)"
       >
@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <div class="ui-tabs--body">
+    <div class="tabs--body">
       <transition-group
         name="tab-slide-right"
       >
@@ -106,7 +106,7 @@ export default {
 .hidden
   display: none
 
-.ui-tabs
+.tabs
   width: 100%
   &--bar
     margin-bottom: $gap

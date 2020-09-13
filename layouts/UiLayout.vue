@@ -1,6 +1,6 @@
 <template>
   <div
-    class="ui-layout"
+    class="layout"
   >
     <slot />
   </div>
@@ -13,6 +13,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.ui-layout
+.layout
   width: 100%
 </style>

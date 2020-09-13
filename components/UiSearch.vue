@@ -1,15 +1,15 @@
 <template>
   <div
-    class="ui-input"
+    class="input"
     :class="{
-      'ui-input_error': errorMessage,
-      'ui-input_active': isListView,
+      'input_error': errorMessage,
+      'input_active': isListView,
     }"
   >
-    <label class="ui-input--inner">
+    <label class="input--inner">
       <span
         v-if="label"
-        class="ui-input--label"
+        class="input--label"
       >
         {{ label }}
       </span>
@@ -19,7 +19,7 @@
         :name="name"
         :placeholder="placeholder"
         :disabled="disabled"
-        class="ui-input--item item"
+        class="input--item item"
         @input="search"
         @focus="isListView = true"
         @blur="isListView = false"
@@ -28,7 +28,7 @@
 
     <div
       v-if="errorMessage"
-      class="ui-input--footer"
+      class="input--footer"
     >
       {{ errorMessage }}
     </div>
@@ -102,7 +102,7 @@
 </script>
 
 <style lang="sass" scoped>
-  .ui-input
+  .input
     padding-bottom: 12px
     color: $dark-color
     position: relative
@@ -194,11 +194,11 @@
       left: 0
       color: $error-color
     &_active
-      .ui-input
+      .input
         &--icon
           transform: rotate(180deg)
     &_error
-      .ui-input--item
+      .input--item
         border-right-color: $error-color
         color: $error-color
 </style>

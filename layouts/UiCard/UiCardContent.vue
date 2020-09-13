@@ -1,6 +1,6 @@
 <template>
   <div
-    class="ui-card--content"
+    class="card--content"
   >
     <slot />
   </div>
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.ui-card--content
+.card--content
   width: 100%
   padding-right: $gap
   padding-left: $gap

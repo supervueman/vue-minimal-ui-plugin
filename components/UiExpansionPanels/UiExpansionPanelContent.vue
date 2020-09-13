@@ -1,9 +1,9 @@
 <template>
   <div
-    class="ui-expansion-panels--item-content"
+    class="expansion-panels--item-content"
     :style="{'height': height !== null && height !== undefined ? `${height}px` : ''}"
   >
-    <div class="ui-expansion-panels--item-content--inner">
+    <div class="expansion-panels--item-content--inner">
       <slot />
     </div>
   </div>
@@ -23,7 +23,7 @@
 </script>
 
 <style lang="sass" scoped>
-.ui-expansion-panels--item-content
+.expansion-panels--item-content
   width: 100%
   transition: height 0.3s $cubic
   &--inner

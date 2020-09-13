@@ -1,19 +1,19 @@
 <template>
   <div
-    class="ui-input"
+    class="input"
     v-bind="$attrs"
-    :class="{ 'ui-input_error': errorMessage }"
+    :class="{ 'input_error': errorMessage }"
   >
-    <label class="ui-input--inner">
+    <label class="input--inner">
       <span
         v-if="label"
-        class="ui-input--label"
+        class="input--label"
       >
         {{ label }}
       </span>
 
       <input
-        :class="inputClass.length ? inputClass : 'ui-input--item'"
+        :class="inputClass.length ? inputClass : 'input--item'"
         :name="name"
         :placeholder="placeholder"
         :type="type"
@@ -27,7 +27,7 @@
 
     <div
       v-if="errorMessage && !hiddenDetails"
-      class="ui-input--footer"
+      class="input--footer"
     >
       {{ errorMessage }}
     </div>
@@ -69,7 +69,7 @@
 </script>
 
 <style lang="sass" scoped>
-.ui-input
+.input
   // padding-bottom: 12px
   margin-bottom: 10px
   color: $dark-color
@@ -112,7 +112,7 @@
     color: $error-color
 
   &_error
-    .ui-input--item
+    .input--item
       border-right-color: $error-color
       color: $error-color
 </style>

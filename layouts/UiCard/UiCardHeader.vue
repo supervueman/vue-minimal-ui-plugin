@@ -1,6 +1,6 @@
 <template>
   <div
-    class="ui-card--header"
+    class="card--header"
   >
     <slot />
   </div>
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.ui-card--header
+.card--header
   width: 100%
   padding-right: $gap
   padding-left: $gap

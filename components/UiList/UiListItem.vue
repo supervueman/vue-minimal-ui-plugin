@@ -1,5 +1,5 @@
 <template>
-  <li class="ui-list-item">
+  <li class="list-item">
     <slot />
   </li>
 </template>
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.ui-list-item
+.list-item
   list-style-type: none
   padding-top: $gap
   padding-bottom: $gap

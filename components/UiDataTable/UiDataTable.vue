@@ -1,6 +1,6 @@
 <template>
   <div
-    class="ui-data-table"
+    class="data-table"
     v-bind="$attrs"
   >
     <table v-if="compareItems.length">
@@ -48,7 +48,7 @@
       >
         <tr
           v-if="showRowHeader"
-          class="ui-data-table--body-row--header"
+          class="data-table--body-row--header"
         >
           <slot
             name="body-row-header"
@@ -57,10 +57,9 @@
         </tr>
 
         <tr
-          class="ui-data-table--body-row pointer"
+          class="data-table--body-row pointer"
           :class="{
-            'ui-data-table--selected-row':
-              selectedRow === item && showSelectRow,
+            'data-table--selected-row': selectedRow === item && showSelectRow,
             'pl-half': showSelectRow,
           }"
           @click="selectRow(item)"
@@ -334,7 +333,7 @@
 </script>
 
 <style lang="sass" scoped>
-.ui-data-table
+.data-table
   text-align: left
   width: 100%
 

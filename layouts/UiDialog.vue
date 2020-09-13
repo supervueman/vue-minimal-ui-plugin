@@ -1,12 +1,12 @@
 <template>
-  <transition name="ui-dialog">
+  <transition name="dialog">
     <div
       v-show="value"
-      class="ui-dialog"
-      :class="{ 'ui-dialog_active': value }"
+      class="dialog"
+      :class="{ 'dialog_active': value }"
     >
       <div
-        class="ui-dialog--content"
+        class="dialog--content"
         :style="{
           'max-width': maxWidth,
           'min-width': minWidth,
@@ -15,7 +15,7 @@
       >
         <slot />
       </div>
-      <div class="ui-dialog--downlay" @click="closeDialog" />
+      <div class="dialog--downlay" @click="closeDialog" />
     </div>
   </transition>
 </template>
@@ -58,7 +58,7 @@
 </script>
 
 <style lang="sass" scoped>
-.ui-dialog
+.dialog
   position: fixed
   width: 100%
   height: 100%
@@ -93,7 +93,7 @@
   &-leave-to
     opacity: 0
   &_active
-    .ui-dialog
+    .dialog
       &--content
         transform: translateY(0)
 </style>

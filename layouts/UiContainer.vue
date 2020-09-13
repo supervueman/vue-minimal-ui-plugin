@@ -1,6 +1,6 @@
 <template>
   <div
-    class="ui-container"
+    class="container"
   >
     <slot />
   </div>
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.ui-container
+.container
   width: 100%
   max-width: $max-width
   padding: 0 $gap

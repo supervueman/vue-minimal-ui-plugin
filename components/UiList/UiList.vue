@@ -1,13 +1,13 @@
 <template>
-  <ul class="ui-list" :class="classProp" :style="{ 'max-height': maxHeight }">
+  <ul class="list" :class="classProp" :style="{ 'max-height': maxHeight }">
     <li
       v-for="(item, index) in items"
       :key="`item-list-${index}`"
       :class="{
-        'ui-list--item_active': selectedItem === item || indexSelected === index,
-        'ui-list--item': isHover,
-        'ui-list--item-no-hover': !isHover,
-        'ui-list--item-border': isBorder
+        'list--item_active': selectedItem === item || indexSelected === index,
+        'list--item': isHover,
+        'list--item-no-hover': !isHover,
+        'list--item-border': isBorder
       }"
     >
       <div class="d-flex justify-between align-center">
@@ -16,7 +16,7 @@
           :style="{ padding: paddingProp }"
           @click="$emit('click-item', { item, index })"
         >
-          <span v-if="iconStatus" class="ui-list--item--icon">
+          <span v-if="iconStatus" class="list--item--icon">
             <slot name="iconStatus" />
           </span>
           <slot name="item" :item="item" :index="index">
@@ -82,7 +82,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-  .ui-list
+  .list
     /*overflow-x: hidden*/
     border-radius: $border-radius
     height: 100%

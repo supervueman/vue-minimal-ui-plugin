@@ -1,6 +1,6 @@
 <template>
   <label
-    class="ui-checkbox"
+    class="checkbox"
     :style="{ 'min-width': minWidth }"
   >
     <input
@@ -11,7 +11,7 @@
       @input="input"
       @change="change"
     >
-    <span class="ui-checkbox--item">
+    <span class="checkbox--item">
       <svg width="19" height="14" viewBox="0 0 19 14" fill="none">
         <path
           d="M2 6L8.3 12L17.3 2"
@@ -24,7 +24,7 @@
     </span>
     <span
       v-if="label"
-      class="ui-checkbox--label"
+      class="checkbox--label"
     >
       {{ label }}
     </span>
@@ -82,7 +82,7 @@
 </script>
 
 <style lang="sass" scoped>
-.ui-checkbox
+.checkbox
   display: flex
   align-items: center
   position: relative

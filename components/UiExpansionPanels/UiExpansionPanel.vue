@@ -1,5 +1,5 @@
 <template>
-  <div class="ui-expansion-panels--item">
+  <div class="expansion-panels--item">
     <UiExpansionPanelHeader
       :isActive="isActive"
       @click="toggle"
@@ -88,7 +88,7 @@
 </script>
 
 <style lang="sass" scoped>
-.ui-expansion-panels--item
+.expansion-panels--item
   display: flex
   width: 100%
   flex-direction: column

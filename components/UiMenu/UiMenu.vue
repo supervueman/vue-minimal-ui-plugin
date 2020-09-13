@@ -1,13 +1,13 @@
 <template>
   <div
-    class="ui-menu"
-    :class="{ 'ui-menu_active': isListView }"
+    class="menu"
+    :class="{ 'menu_active': isListView }"
     @click="$emit('click', $event)"
     @mouseover="openList"
     @mouseleave="closeList"
   >
     <input
-      class="ui-menu--button item"
+      class="menu--button item"
       readonly
       :placeholder="label"
       @click="$emit('click-button', $event)"
@@ -15,13 +15,13 @@
       @blur="closeListClick"
     >
 
-    <transition name="ui-menu--list">
-      <div v-show="isListView" class="ui-menu--list list">
+    <transition name="menu--list">
+      <div v-show="isListView" class="menu--list list">
         <ul>
           <li
             v-for="(item, i) in items"
             :key="`menu-list-item-${i}`"
-            class="ui-menu--list-item"
+            class="menu--list-item"
             @click="$emit('click-list-item', item)"
           >
             <slot name="item" :item="item">
@@ -32,8 +32,8 @@
       </div>
     </transition>
 
-    <div class="ui-menu--icon" @click="$emit('click-icon', $event)">
-      <div class="ui-menu--icon-item">
+    <div class="menu--icon" @click="$emit('click-icon', $event)">
+      <div class="menu--icon-item">
         <slot name="icon">
           <svg>
             <path
@@ -102,7 +102,7 @@
 </script>
 
 <style lang="sass" scoped>
-.ui-menu
+.menu
   background-color: $brand-color
   color: $light-color
   cursor: pointer
@@ -184,6 +184,6 @@
   .list
     display: block
   &_active
-    .ui-menu--icon-item
+    .menu--icon-item
       transform: rotate(180deg)
 </style>

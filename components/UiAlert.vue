@@ -1,13 +1,13 @@
 <template>
-  <transition name="ui-alert">
+  <transition name="alert">
     <div
       v-if="isActive"
       :class="{
-        'ui-alert_success': alertType === 'success',
-        'ui-alert_warning': alertType === 'warning',
-        'ui-alert_error': alertType === 'error',
+        'alert_success': alertType === 'success',
+        'alert_warning': alertType === 'warning',
+        'alert_error': alertType === 'error',
       }"
-      class="ui-alert"
+      class="alert"
     >
       {{ text }}
     </div>
@@ -36,7 +36,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.ui-alert
+.alert
   max-width: 300px
   padding: $gap
   transition-timing-function: $cubic

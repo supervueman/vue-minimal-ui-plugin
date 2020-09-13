@@ -1,6 +1,6 @@
 <template>
   <header
-    class="ui-toolbar"
+    class="toolbar"
   >
     <slot />
   </header>
@@ -8,19 +8,13 @@
 
 <script>
 export default {
-  name: 'UiToolbar',
-
-  props: {
-    fixed: {
-      type: Boolean,
-      default: false
-    }
-  }
+  name: 'UiToolbar'
 };
 </script>
 
 <style lang="sass" scoped>
-.ui-toolbar
+.toolbar
+  position: fixed
   top: 0
   left: 0
   width: calc(100% - 1px)
