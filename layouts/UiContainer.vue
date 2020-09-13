@@ -24,10 +24,13 @@ export default {
 .ui-container
   width: 100%
   max-width: $max-width
-  min-width: 1240px
   padding: 0 $gap
   margin-right: auto
   margin-left: auto
-  &_big
-    max-width: $max-width-big-container
+  @include media(lg)
+    max-width: 992px
+  @include media(md)
+    max-width: 768px
+  @include media(sm)
+    max-width: 100%
 </style>
