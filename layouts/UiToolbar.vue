@@ -1,13 +1,12 @@
 <template>
   <header
     class="ui-toolbar"
-    :class="{'ui-toolbar_fixed': fixed}"
   >
     <slot />
   </header>
 </template>
 
-<script lang="ts">
+<script>
 export default {
   name: 'UiToolbar',
 
@@ -28,6 +27,4 @@ export default {
   display: flex
   align-items: center
   z-index: z(toolbar)
-  &_fixed
-    position: fixed
 </style>
