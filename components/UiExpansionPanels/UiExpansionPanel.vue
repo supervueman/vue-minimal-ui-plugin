@@ -1,6 +1,9 @@
 <template>
   <div class="ui-expansion-panels--item">
-    <UiExpansionPanelHeader :isActive="isActive" @click="toggle">
+    <UiExpansionPanelHeader
+      :isActive="isActive"
+      @click="toggle"
+    >
       <slot name="header" />
     </UiExpansionPanelHeader>
 

@@ -14,8 +14,6 @@ import UiCardContent from "./layouts/UiCard/UiCardContent";
 import UiCardActions from "./layouts/UiCard/UiCardActions";
 // Dialog
 import UiDialog from "./layouts/UiDialog";
-// List
-import UiList from "./layouts/UiList/UiList";
 
 /* ==============================================
  * ================= Components =================
@@ -36,6 +34,7 @@ import UiMenu from "./components/UiMenu/UiMenu";
 import UiSearch from "./components/UiSearch";
 import UiDragAndDropFile from "./components/UiDragAndDropFile";
 import UiScrollPagination from "./components/UiScrollPagination";
+import UiList from "./components/UiList/UiList";
 
 const components = {
   // Layouts

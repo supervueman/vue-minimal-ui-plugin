@@ -1,7 +1,6 @@
 <template>
   <div
     class="ui-container"
-    :class="{'ui-container_big': big}"
   >
     <slot />
   </div>
@@ -9,14 +8,7 @@
 
 <script>
 export default {
-  name: "UiContainer",
-
-  props: {
-    big: {
-      type: Boolean,
-      default: false
-    }
-  }
+  name: "UiContainer"
 };
 </script>
 
