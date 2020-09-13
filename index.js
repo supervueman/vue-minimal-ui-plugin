@@ -1,3 +1,5 @@
+import Vue from 'vue';
+
 /* ==============================================
  * ================= Layouts ====================
  */
@@ -35,44 +37,40 @@ import UiSearch from "./components/UiSearch";
 import UiDragAndDropFile from "./components/UiDragAndDropFile";
 import UiScrollPagination from "./components/UiScrollPagination";
 
-export default {
-  install(Vue) {
-    Vue.config.prefix = 'Ui';
-
-    Vue.mixin({
-      components: {
-        // Layouts
-        UiLayout,
-        UiContainer,
-        UiToolbar,
-        // Card
-        UiCard,
-        UiCardHeader,
-        UiCardMedia,
-        UiCardContent,
-        UiCardActions,
-        // Dialog
-        UiDialog,
-        // List
-        UiList,
-        // Components
-        UiAlert,
-        UiInput,
-        UiInputSearch,
-        UiFileInput,
-        UiCheckbox,
-        UiTextarea,
-        UiSelect,
-        UiDataTable,
-        UiPagination,
-        UiTabs,
-        UiExpansionPanels,
-        UiExpansionPanel,
-        UiMenu,
-        UiSearch,
-        UiDragAndDropFile,
-        UiScrollPagination
-      },
-    });
-  }
+const components = {
+  // Layouts
+  UiLayout,
+  UiContainer,
+  UiToolbar,
+  // Card
+  UiCard,
+  UiCardHeader,
+  UiCardMedia,
+  UiCardContent,
+  UiCardActions,
+  // Dialog
+  UiDialog,
+  // List
+  UiList,
+  // Components
+  UiAlert,
+  UiInput,
+  UiInputSearch,
+  UiFileInput,
+  UiCheckbox,
+  UiTextarea,
+  UiSelect,
+  UiDataTable,
+  UiPagination,
+  UiTabs,
+  UiExpansionPanels,
+  UiExpansionPanel,
+  UiMenu,
+  UiSearch,
+  UiDragAndDropFile,
+  UiScrollPagination
 };
+
+Object.entries(components).forEach(([name, component]) => {
+  Vue.component(name, component);
+});
