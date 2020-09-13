@@ -7,7 +7,13 @@
     }"
   >
     <label class="ui-input--inner">
-      <span v-if="label" class="ui-input--label">{{ label }}</span>
+      <span
+        v-if="label"
+        class="ui-input--label"
+      >
+        {{ label }}
+      </span>
+
       <input
         :value="value"
         :name="name"
@@ -20,7 +26,10 @@
       >
     </label>
 
-    <div v-if="errorMessage" class="ui-input--footer">
+    <div
+      v-if="errorMessage"
+      class="ui-input--footer"
+    >
       {{ errorMessage }}
     </div>
   </div>

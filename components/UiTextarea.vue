@@ -5,7 +5,10 @@
     :class="{ 'ui-textarea--error': errorMessage && hasError }"
   >
     <div class="ui-textarea--inner">
-      <span class="ui-textarea--label">{{ label }}</span>
+      <span class="ui-textarea--label">
+        {{ label }}
+      </span>
+
       <textarea
         class="ui-textarea--item"
         :class="{ 'ui-textarea--error': hasError }"
@@ -19,6 +22,7 @@
         @input="$emit('input', $event.target.value)"
       />
     </div>
+
     <div
       v-if="errorMessage && hasError"
       class="ui-textarea--footer"

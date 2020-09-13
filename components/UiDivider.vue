@@ -29,7 +29,6 @@
     &_horizontal
       height: 2px
       width: 100%
-
     &_vertical
       width: 2px
 </style>

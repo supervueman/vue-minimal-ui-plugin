@@ -1,9 +1,17 @@
 <template>
   <div
     class="ui-select"
-    :class="{ 'ui-select_error': errorMessage, 'ui-select_active': isListView }"
+    :class="{
+      'ui-select_error': errorMessage,
+      'ui-select_active': isListView
+    }"
   >
-    <span v-if="label" class="ui-select--label">{{ label }}</span>
+    <span
+      v-if="label"
+      class="ui-select--label"
+    >
+      {{ label }}
+    </span>
 
     <div class="ui-select--inner">
       <input
@@ -55,7 +63,10 @@
       </transition>
     </div>
 
-    <div v-if="errorMessage" class="ui-select--footer">
+    <div
+      v-if="errorMessage"
+      class="ui-select--footer"
+    >
       {{ errorMessage }}
     </div>
   </div>

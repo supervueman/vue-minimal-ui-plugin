@@ -86,11 +86,14 @@ import valid from "../mixins/fileInputValid.js";
 
 export default {
   name: "UiDragAndDropFile",
+
   mixins: [valid],
+
   model: {
     prop: 'value',
     event: 'change'
   },
+
   props: {
     columns: {
       type: String,
@@ -101,17 +104,20 @@ export default {
       default: 'Перетащите в данную область свои файлы'
     }
   },
+
   data() {
     return {
       files: [],
       isHoverFiles: false
     }
   },
+
   computed: {
     getColumns() {
       return `width: calc(100% / ${this.columns})`
     }
   },
+
   methods: {
     addFile(e) {
       const files = [];
@@ -133,9 +139,11 @@ export default {
       });
       this.isHoverFiles = false;
     },
+
     fileLeave() {
       this.isHoverFiles = false;
     },
+
     fileEnter() {
       this.isHoverFiles = true;
     }

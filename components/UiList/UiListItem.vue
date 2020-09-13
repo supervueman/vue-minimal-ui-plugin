@@ -1,6 +1,6 @@
 <template>
   <li class="ui-list-item">
-    <slot></slot>
+    <slot />
   </li>
 </template>
 

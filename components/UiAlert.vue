@@ -6,7 +6,6 @@
         'ui-alert_success': alertType === 'success',
         'ui-alert_warning': alertType === 'warning',
         'ui-alert_error': alertType === 'error',
-        'ui-alert_fill': fill
       }"
       class="ui-alert"
     >
@@ -31,10 +30,6 @@ export default {
     alertType: {
       type: String,
       default: ""
-    },
-    fill: {
-      type: Boolean,
-      default: false
     }
   }
 };
@@ -50,20 +45,15 @@ export default {
   background-color: $light-color
   z-index: z(notification)
   &_success
-    border-color: $success-color
-  &_warning
-    border-color: $warning-color
-  &_error
-    border-color: $error-color
-  &_fill.ui-alert_success
     background-color: $success-color
     color: $light-color
-  &_fill.ui-alert_warning
+  &_warning
     background-color: $warning-color
     color: $light-color
-  &_fill.ui-alert_error
+  &_error
     background-color: $error-color
     color: $light-color
+
   &-enter-active, &-leave-active
     transition: opacity 1s
   &-enter, &-leave-to

@@ -5,7 +5,13 @@
     :class="{ 'ui-input_error': errorMessage }"
   >
     <label class="ui-input--inner">
-      <span v-if="label" class="ui-input--label">{{ label }}</span>
+      <span
+        v-if="label"
+        class="ui-input--label"
+      >
+        {{ label }}
+      </span>
+
       <input
         :class="inputClass.length ? inputClass : 'ui-input--item'"
         :name="name"
@@ -18,7 +24,11 @@
         @input="$emit('input', $event.target.value)"
       >
     </label>
-    <div v-if="errorMessage && !hiddenDetails" class="ui-input--footer">
+
+    <div
+      v-if="errorMessage && !hiddenDetails"
+      class="ui-input--footer"
+    >
       {{ errorMessage }}
     </div>
   </div>
